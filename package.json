@@ -1,12 +1,12 @@
 {
-  "name": "nytimesreact",
+  "name": "Waiting App",
   "version": "1.0.0",
-  "description": "A New York Times Article Search",
+  "description": "A reservation app with trivia.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Monica Szabo",
+  "author": "Alex Nguyen, Jose Morales, Jon Gryn, Charles Hu, Michael Osgood",
   "license": "ISC",
   "engines": {
     "node": "^4.4.7"
