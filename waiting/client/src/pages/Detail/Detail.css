@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: url("../../images/food1.jpg");
     background-color: #cccccc;
     background-repeat:repeat-y;
@@ -7,15 +7,4 @@ body {
 .container-fluid {
     text-align: center;
 }
-/* Title */
-h1 {
-    color: #9ad3d3;
-    font-family: 'Passion One', cursive;
-    font-size: 105px;
-} 
-/* Body */
-h4 {
-    color: #9ad3d3;
-    font-family: 'Amatic SC', cursive;
-    font-size: 50px;
-}
+*/

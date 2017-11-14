@@ -11,11 +11,11 @@ import "./Home.css";
 
 const Home = () =>
 <div>
-<NewNav />
+{/* <NewNav />  we dont need header*/}
 <div className="container-fluid">
     <h1>WAITING</h1>
     <h4>Welcome to a new dining experience!</h4>
 </div>
-<Footer />
+{/* <Footer /> we dont need footer */}
 </div>
 export default Home;
