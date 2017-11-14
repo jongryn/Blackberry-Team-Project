@@ -1,32 +1,27 @@
 {
-  "name": "Waiting App",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "A reservation app with trivia.",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alex Nguyen, Jose Morales, Jon Gryn, Charles Hu, Michael Osgood",
+  "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "^4.4.7"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "axios": "^0.12.0",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "mongoose": "^4.5.10",
-    "morgan": "^1.7.0",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "request": "^2.72.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.3.13",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "json-loader": "^0.5.4",
-    "webpack": "^1.13.1"
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7",
+    "react-router-dom": "^4.1.2"
   }
 }

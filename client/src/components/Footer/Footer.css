@@ -1,0 +1,12 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #89bdd3;
+    width: 100%;
+    text-align: center;
+}
+p {
+    color: #e3e3e3;
+    font-family: 'Passion One', cursive;
+    font-size: 30px;
+}
