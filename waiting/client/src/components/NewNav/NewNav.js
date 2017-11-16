@@ -20,7 +20,7 @@ const NewNav = () => (
             <span className="icon-bar" />
           </button>
           <a className="navbar-brand" href="/books">
-            Sign Up
+            Waiting
           </a>
         </div>
       </div>

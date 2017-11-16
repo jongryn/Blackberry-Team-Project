@@ -59,12 +59,11 @@ class Books extends Component {
   render() {
     return (
       <div>
-        <NewNav />
           <Container fluid>
             <Row>
               <Col size="md-6">
                 <div>
-                  <h1>Sign up here!</h1>
+                  <h1>Sign in here!</h1>
                 </div>
                 <form>
                   <Input
@@ -79,12 +78,20 @@ class Books extends Component {
                     name="author"
                     placeholder="Number of guests in party (required)"
                   />
+                  <Input
+                  value={this.state.synopsis}
+                  onChange={this.handleInputChange}
+                  name="synopsis"
+                  placeholder="Phone Number (required)"
+                  />
+                  {/* THIS IS FUNCTIONAL; USED FOR SYNOPSIS
                   <TextArea
                     value={this.state.synopsis}
                     onChange={this.handleInputChange}
                     name="synopsis"
                     placeholder="Describe yourself! (optional)"
-                  />
+                  /> 
+                  */}
                   <FormBtn
                     disabled={!(this.state.author && this.state.title)}
                     onClick={this.handleFormSubmit}

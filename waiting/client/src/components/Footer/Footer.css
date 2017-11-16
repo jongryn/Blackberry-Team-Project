@@ -1,12 +1,21 @@
 footer {
     position: fixed;
     bottom: 0;
-    background-color: #89bdd3;
+    /* background-color: #89bdd3; */
     width: 100%;
     text-align: center;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 p {
-    color: #e3e3e3;
-    font-family: 'Passion One', cursive;
+    color:white;
+    font-family: 'Lakki Reddy', cursive;        
     font-size: 30px;
+}
+span {
+    font-size: 20px;
+    color:white;
 }

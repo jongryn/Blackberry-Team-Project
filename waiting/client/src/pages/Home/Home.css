@@ -10,9 +10,12 @@ body {
 /* Title */
 h1 {
     color: #white;
-    font-family: 'Passion One', cursive;
-    font-size: 105px;
+    /* font-family: 'Passion One', cursive; */
+    font-size: 100px;
     text-outline: 5px 5px #ff0000;
+    font-family: 'Lakki Reddy', cursive;    
+   /* font-family: 'Jacques Francois Shadow', cursive; */
+   
     
 } 
 /* Body */
