@@ -57,6 +57,7 @@ class Books extends Component {
   };
 
   render() {
+    console.log(this.state)
     return (
       <div>
           <Container fluid>
