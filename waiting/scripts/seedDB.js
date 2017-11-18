@@ -11,7 +11,7 @@ mongoose.connect(
   }
 );
 
-const bookSeed = [
+const userSeed = [
   {
     title: "The Dead Zone",
     author: "Stephen King",
@@ -126,9 +126,9 @@ const bookSeed = [
   }
 ];
 
-db.Book
+db.User
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
