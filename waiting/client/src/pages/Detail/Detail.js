@@ -53,6 +53,7 @@ class Detail extends Component {
       </Container>
       <Footer />
       </div>
+
     );
   }
 }

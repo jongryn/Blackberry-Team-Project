@@ -9,6 +9,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import NewNav from "../../components/NewNav";
 import Footer from "../../components/Footer";
 import "./Books.css";
+import Quiz from "../../components/Quiz";
 
 class Books extends Component {
   state = {
@@ -123,6 +124,7 @@ class Books extends Component {
               </Col>
             </Row>
           </Container>
+          <div><Quiz/></div>
         <Footer />
       </div>
     );
