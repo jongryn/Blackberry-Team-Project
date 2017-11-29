@@ -4,8 +4,9 @@ import "./Footer.css";
 const Footer = () => (
   <div>
     <footer>
-      <p>The BlackBerry Project <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span></p>
-     
+      <a href="/">
+      <p>The BlackBerry Project <span className="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span></p>
+      </a>
     </footer>
   </div>
 );

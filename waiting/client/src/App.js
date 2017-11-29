@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Trivia from "./pages/Trivia";
+import SignIn from "./pages/SignIn";
+import WaitList from "./pages/WaitList";
 
 const App = () =>
   <Router>
@@ -13,6 +15,8 @@ const App = () =>
         <Route exact path="/" component={Home} />
         <Route exact path="/trivia" component={Trivia} />
         <Route exact path="/books" component={Books} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/waitlist" component={WaitList} />
         <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>
