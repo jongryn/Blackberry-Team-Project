@@ -85,14 +85,6 @@ class Books extends Component {
                   name="synopsis"
                   placeholder="Phone Number (required)"
                   />
-                  {/* THIS IS FUNCTIONAL; USED FOR SYNOPSIS
-                  <TextArea
-                    value={this.state.synopsis}
-                    onChange={this.handleInputChange}
-                    name="synopsis"
-                    placeholder="Describe yourself! (optional)"
-                  /> 
-                  */}
                   <FormBtn
                     disabled={!(this.state.author && this.state.title)}
                     onClick={this.handleFormSubmit}
