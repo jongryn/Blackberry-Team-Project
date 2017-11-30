@@ -9,8 +9,10 @@ Description: A mobile application that allows users to get wait times for restau
 Start by installing front and backend dependencies. While in this directory, run the following commands:
 
 ```
+npm install
 yarn install
 cd client
+npm install
 yarn install
 cd ..
 ``
@@ -18,6 +20,7 @@ cd ..
 After both installations complete, run the following command in your terminal:
 
 ```
+mongod
 yarn start
 ```
 
