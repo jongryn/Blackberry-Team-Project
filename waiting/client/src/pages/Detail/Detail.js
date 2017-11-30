@@ -6,6 +6,7 @@ import API from "../../utils/API";
 import NewNav from "../../components/NewNav";
 import Footer from "../../components/Footer";
 import "./Detail.css";
+import Quiz from "../../components/Quiz";
 
 class Detail extends Component {
   state = {
@@ -51,6 +52,7 @@ class Detail extends Component {
         </Row> 
         */}
       </Container>
+      <div><Quiz/></div>
       <Footer />
       </div>
 
