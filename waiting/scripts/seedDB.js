@@ -45,27 +45,32 @@ const userSeed = [
     {
       name: "Jose Morales",
       phone: "123-123-1234",
-      guest: 4
+      partysize: 4,
+      checkinto: "Urban Seoul"
     },
     {
       name: "Charles Hu",
       phone: "123-123-1234",
-      guest: 8
+      partysize: 8,
+      checkinto: "Urban Seoul"
     },
     {
       name: "Alex",
       phone: "123-123-1234",
-      guest: 5
+      partysize: 5,
+      checkinto: "Urban Seoul"
     },
     {
       name: "Micheal",
       phone: "123-123-1234",
-      guest: 2
+      partysize: 2,
+      checkinto: "Habana"
     },
     {
       name: "Jon Grin",
       phone: "123-123-1234",
-      guest: 2
+      partysize: 2,
+      checkinto: "Habana"
     }
   ];
 

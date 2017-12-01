@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import NewNav from "../../components/NewNav";
+import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import Quiz from "../../components/Quiz";
 import "./Home.css";
 
 class Home extends Component {
@@ -16,8 +14,10 @@ class Home extends Component {
     restaurants: [],
     name: "",
     zip: "",
-    img: ""
+    img: "",
+    waittime: "",
   };
+
 
   componentDidMount() {
     this.loadRestaurants();
@@ -26,7 +26,7 @@ class Home extends Component {
   loadRestaurants = () => {
     API.getRestaurants()
       .then(res =>
-        this.setState({ restaurants: res.data, name: "", zip: "", img: "" })
+        this.setState({ restaurants: res.data, name: "", zip: "", img: "", waittime: ""  })
       )
       .catch(err => console.log(err));
   };
@@ -50,6 +50,7 @@ class Home extends Component {
       API.saveRestaurant({
         name: this.state.name,
         address: this.state.zip,
+        waittime: this.state.waittime,
         img: this.state.img
       })
         .then(res => this.loadRestaurants())
@@ -60,6 +61,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+      <Nav />
           <Container fluid>
             <Row>
               <Col size="md-3" col-lg-offset-3>
@@ -72,7 +74,11 @@ class Home extends Component {
                       <ListItem key={restaurant._id}>
                         <Link to={"/restaurants/" + restaurant._id}>
                           <strong>
-                            {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
+                            {restaurant.name} <br/>
+                            {restaurant.zip} <br/>
+                            Current wait time: {restaurant.waittime} <br/>
+                            <img alt='res' src= {restaurant.img} />
+
                           </strong>
                         </Link>
                         <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
@@ -90,5 +96,7 @@ class Home extends Component {
     );
   }
 }
+
+
 
 export default Home;

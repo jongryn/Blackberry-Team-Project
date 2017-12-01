@@ -13,8 +13,8 @@ class CusSignIn extends Component {
     state = {
       users: [],
       name: "",
+      partysize: "",
       phone: "",
-      guest: "",
     };
 
     componentDidMount() {
@@ -24,7 +24,7 @@ class CusSignIn extends Component {
     loadUsers = () => {
       API.getUsers()
         .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", guest: ""})
+          this.setState({ users: res.data, name: "", phone: "", partysize: ""})
         )
         .catch(err => console.log(err));
     };
@@ -44,11 +44,11 @@ class CusSignIn extends Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
-      if (this.state.name && this.state.phone && this.state.guest) {
+      if (this.state.name && this.state.phone && this.state.partysize) {
         API.saveUser({
           name: this.state.name,
           phone: this.state.phone,
-          guest: this.state.guest
+          partysize: this.state.partysize
         })
           .then(res => this.loadUsers())
           .catch(err => console.log(err));
@@ -61,7 +61,7 @@ class CusSignIn extends Component {
         <div>
             <Container fluid>
               <Row>
-                <Col size="md-6">
+                <Col size="md-4">
                   <div>
                     <h1>Please Check In</h1>
                   </div>
@@ -73,38 +73,39 @@ class CusSignIn extends Component {
                       placeholder="Name (required)"
                     />
                     <Input
-                      value={this.state.phone}
+                      value={this.state.partysize}
                       onChange={this.handleInputChange}
-                      name="phone"
-                      placeholder="Phone Number (required)"
+                      name="partysize"
+                      placeholder="How many people are in your party? (required)"
                     />
                     <Input
-                    value={this.state.img}
+                    value={this.state.phone}
                     onChange={this.handleInputChange}
-                    name="guest"
-                    placeholder="Number of Guest(required)"
+                    name="phone"
+                    placeholder="Phone Number(required)"
                     />
                     <FormBtn
-                      disabled={!(this.state.name && this.state.phone && this.state.guest)}
+                      disabled={!(this.state.name && this.state.phone && this.state.partysize)}
                       onClick={this.handleFormSubmit}
                     >
-                      Submit Name
+                      Check In
                     </FormBtn>
                   </form>
                 </Col>
-                // For submit validation
-                <Col size="md-4">
+                {/*<Col size="md-4">
+                // For testing
                   <div>
-                    <h1>Near By Restaurants</h1>
+                    <h1>Waiting List</h1>
                   </div>
                   {this.state.users.length ? (
                     <List>
                       {this.state.users.map(user => (
                         <ListItem key={user._id}>
                           <Link to={"/users/" + user._id}>
-                            <strong>
-                              {user.name} - {user.phone} - {user.guest}
-                            </strong>
+                              Name: {user.name} <br/>
+                              Party Size: {user.partysize} <br/>
+                              Phone: {user.phone}<br/>
+                              Checked Into: {user.checkinto}
                           </Link>
                           <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                         </ListItem>
@@ -113,7 +114,7 @@ class CusSignIn extends Component {
                   ) : (
                     <h3>No Results to Display</h3>
                   )}
-                </Col>
+                </Col>*/}
 
               </Row>
             </Container>

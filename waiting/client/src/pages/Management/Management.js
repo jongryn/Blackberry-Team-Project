@@ -61,27 +61,29 @@ class Management extends Component {
         <div>
             <Container fluid>
               <Row>
-                <Col size="md-4">
-                  <div>
-                    <h1>List</h1>
-                  </div>
-                  {this.state.users.length ? (
-                    <List>
-                      {this.state.users.map(user => (
-                        <ListItem key={user._id}>
-                          <Link to={"/users/" + user._id}>
-                            <strong>
-                              {user.name} for {user.guest}
-                            </strong>
-                          </Link>
-                          <DeleteBtn onClick={() => this.deleteUser(user._id)} />
-                        </ListItem>
-                      ))}
-                    </List>
-                  ) : (
-                    <h3>No Results to Display</h3>
-                  )}
-                </Col>
+              <Col size="md-4">
+              {/*For testing*/}
+                <div>
+                  <h1>Waiting List</h1>
+                </div>
+                {this.state.users.length ? (
+                  <List>
+                    {this.state.users.map(user => (
+                      <ListItem key={user._id}>
+                        <Link to={"/users/" + user._id}>
+                            Name: {user.name} <br/>
+                            Party Size: {user.partysize} <br/>
+                            Phone: {user.phone}<br/>
+                            Checked Into: {user.checkinto}
+                        </Link>
+                        <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                      </ListItem>
+                    ))}
+                  </List>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+              </Col>
               </Row>
             </Container>
           <Footer />
