@@ -23,17 +23,6 @@ class CusSignIn extends Component {
         .catch(err => console.log(err));
     }
 
-    componentDidMount() {
-      this.loadUsers();
-    }
-
-    loadUsers = () => {
-      API.getUsers()
-        .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", partysize: ""})
-        )
-        .catch(err => console.log(err));
-    };
 
     deleteUser = id => {
       API.deleteUser(id)
@@ -73,6 +62,7 @@ class CusSignIn extends Component {
                   <div>
                     <h1>Please Check In</h1>
                   </div>
+
                   <form>
                     <Input
                       value={this.state.name}

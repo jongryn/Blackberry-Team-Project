@@ -14,7 +14,8 @@ class ResSignUp extends Component {
       restaurants: [],
       name: "",
       zip: "",
-      img: ""
+      img: "",
+      waittime: 0,
     };
 
     componentDidMount() {
@@ -48,7 +49,8 @@ class ResSignUp extends Component {
         API.saveRestaurant({
           name: this.state.name,
           zip: this.state.zip,
-          img: this.state.img
+          img: this.state.img,
+          waittime: this.state.waittime
         })
           .then(res => this.loadRestaurants())
           .catch(err => console.log(err));
@@ -56,7 +58,6 @@ class ResSignUp extends Component {
     };
 
     render() {
-      console.log(this.state)
       return (
         <div>
             <Container fluid>
@@ -92,7 +93,7 @@ class ResSignUp extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                {/*// For submit validation
+                // For submit validation
                 <Col size="md-4">
                   <div>
                     <h1>Near By Restaurants</h1>
@@ -113,7 +114,7 @@ class ResSignUp extends Component {
                   ) : (
                     <h3>No Results to Display</h3>
                   )}
-                </Col>*/}
+                </Col>
 
               </Row>
             </Container>

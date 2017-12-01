@@ -6,6 +6,7 @@ body {
 }
 .container-fluid {
     text-align: center;
+    align-items: center;
 }
 .row {
   text-align: center;

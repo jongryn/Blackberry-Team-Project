@@ -8,6 +8,8 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import "./Home.css";
+import CheckInModal from "../../components/CheckInModal";
+import Center from 'react-center';
 
 class Home extends Component {
   state = {
@@ -63,26 +65,24 @@ class Home extends Component {
       <div>
       <Nav />
           <Container fluid>
-            <Row>
-              <Col size="md-3" col-lg-offset-3>
+          <Row>
+              <Col size="md-12">
                 <div>
                   <h1>Near By Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
+                      <Col size="md-6">
                       <ListItem key={restaurant._id}>
                         <Link to={"/restaurants/" + restaurant._id}>
-                          <strong>
                             {restaurant.name} <br/>
                             {restaurant.zip} <br/>
                             Current wait time: {restaurant.waittime} <br/>
                             <img alt='res' src= {restaurant.img} />
-
-                          </strong>
                         </Link>
-                        <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
                       </ListItem>
+                      </Col>
                     ))}
                   </List>
                 ) : (

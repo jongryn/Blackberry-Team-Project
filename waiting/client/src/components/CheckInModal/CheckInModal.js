@@ -1,28 +1,39 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import mountNode from "react";
-import Modal from 'react-bootstrap/lib/Modal';
-import Button from 'react-bootstrap/lib/Button';
+import React from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+class CheckInModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: true
+    };
 
-const CheckInModal = (
-  <div className="static-modal">
-    <Modal.Dialog>
-      <Modal.Header>
-        <Modal.Title>Modal title</Modal.Title>
-      </Modal.Header>
+    this.toggle = this.toggle.bind(this);
+  }
 
-      <Modal.Body>
-        One fine body...
-      </Modal.Body>
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
 
-      <Modal.Footer>
-        <Button>Close</Button>
-        <Button bsStyle="primary">Save changes</Button>
-      </Modal.Footer>
-
-    </Modal.Dialog>
-  </div>
-);
+  render() {
+    return (
+      <div>
+        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+    );
+  }
+}
 
 export default CheckInModal;

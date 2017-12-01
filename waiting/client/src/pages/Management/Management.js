@@ -24,7 +24,7 @@ class Management extends Component {
     loadUsers = () => {
       API.getUsers()
         .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", guest: "" })
+          this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: "" })
         )
         .catch(err => console.log(err));
     };
