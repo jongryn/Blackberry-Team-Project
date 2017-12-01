@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
+import { Input, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
+import DeleteBtn from "../../components/DeleteBtn";
 import Footer from "../../components/Footer";
-import "./WaitingList.css";
+import "./CusSignIn.css";
 
 
-class WaitingList extends Component {
+class CusSignIn extends Component {
     state = {
       users: [],
       name: "",
       phone: "",
       guest: "",
-      selectedres: ""
     };
 
     componentDidMount() {
@@ -24,7 +24,7 @@ class WaitingList extends Component {
     loadUsers = () => {
       API.getUsers()
         .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", guest: "" })
+          this.setState({ users: res.data, name: "", phone: "", guest: ""})
         )
         .catch(err => console.log(err));
     };
@@ -44,11 +44,11 @@ class WaitingList extends Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
-      if (this.state.name && this.state.phone) {
+      if (this.state.name && this.state.phone && this.state.guest) {
         API.saveUser({
-          name: this.state.title,
-          phone: this.state.author,
-          guest: this.state.synopsis
+          name: this.state.name,
+          phone: this.state.phone,
+          guest: this.state.guest
         })
           .then(res => this.loadUsers())
           .catch(err => console.log(err));
@@ -61,9 +61,41 @@ class WaitingList extends Component {
         <div>
             <Container fluid>
               <Row>
-                <Col size="md-12">
+                <Col size="md-6">
                   <div>
-                    <h1>List</h1>
+                    <h1>Please Check In</h1>
+                  </div>
+                  <form>
+                    <Input
+                      value={this.state.name}
+                      onChange={this.handleInputChange}
+                      name="name"
+                      placeholder="Name (required)"
+                    />
+                    <Input
+                      value={this.state.phone}
+                      onChange={this.handleInputChange}
+                      name="phone"
+                      placeholder="Phone Number (required)"
+                    />
+                    <Input
+                    value={this.state.img}
+                    onChange={this.handleInputChange}
+                    name="guest"
+                    placeholder="Number of Guest(required)"
+                    />
+                    <FormBtn
+                      disabled={!(this.state.name && this.state.phone && this.state.guest)}
+                      onClick={this.handleFormSubmit}
+                    >
+                      Submit Name
+                    </FormBtn>
+                  </form>
+                </Col>
+                // For submit validation
+                <Col size="md-4">
+                  <div>
+                    <h1>Near By Restaurants</h1>
                   </div>
                   {this.state.users.length ? (
                     <List>
@@ -71,7 +103,7 @@ class WaitingList extends Component {
                         <ListItem key={user._id}>
                           <Link to={"/users/" + user._id}>
                             <strong>
-                              {user.name} for {user.guest}
+                              {user.name} - {user.phone} - {user.guest}
                             </strong>
                           </Link>
                           <DeleteBtn onClick={() => this.deleteUser(user._id)} />
@@ -82,6 +114,7 @@ class WaitingList extends Component {
                     <h3>No Results to Display</h3>
                   )}
                 </Col>
+
               </Row>
             </Container>
           <Footer />
@@ -90,4 +123,4 @@ class WaitingList extends Component {
     }
   }
 
-  export default WaitingList;
+  export default CusSignIn;

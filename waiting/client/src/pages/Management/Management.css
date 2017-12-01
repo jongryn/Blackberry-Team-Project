@@ -1,14 +1,13 @@
 /* Title */
 h1 {
     color: white;
-    font-family: 'Passion One', cursive;
     font-size: 105px;
     text-shadow:
     -3px -3px 0 #000,
     3px -3px 0 #000,
     -3px 3px 0 #000,
     3px 3px 0 #000;
-} 
+}
 /* Body */
 h4 {
     color: #9ad3d3;

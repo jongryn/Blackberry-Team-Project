@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
+import { List, ListItem } from "../../components/List";
+import DeleteBtn from "../../components/DeleteBtn";
 import Footer from "../../components/Footer";
-import "./SignIn.css";
+import "./ResSignUp.css";
 
 
-class SignIn extends Component {
+class ResSignUp extends Component {
     state = {
       restaurants: [],
-      title: "",
-      author: "",
-      synopsis: ""
+      name: "",
+      zip: "",
+      img: ""
     };
 
     componentDidMount() {
@@ -21,7 +24,7 @@ class SignIn extends Component {
     loadRestaurants = () => {
       API.getRestaurants()
         .then(res =>
-          this.setState({ restaurants: res.data, title: "", author: "", synopsis: "" })
+          this.setState({ restaurants: res.data, name: "", zip: "", img: "" })
         )
         .catch(err => console.log(err));
     };
@@ -41,11 +44,11 @@ class SignIn extends Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
-      if (this.state.title && this.state.author) {
+      if (this.state.name && this.state.zip) {
         API.saveRestaurant({
-          title: this.state.title,
-          author: this.state.author,
-          synopsis: this.state.synopsis
+          name: this.state.name,
+          zip: this.state.zip,
+          img: this.state.img
         })
           .then(res => this.loadRestaurants())
           .catch(err => console.log(err));
@@ -58,7 +61,7 @@ class SignIn extends Component {
         <div>
             <Container fluid>
               <Row>
-                <Col size="md-12">
+                <Col size="md-6">
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
@@ -70,26 +73,48 @@ class SignIn extends Component {
                       placeholder="Name (required)"
                     />
                     <Input
-                      value={this.state.address}
+                      value={this.state.zip}
                       onChange={this.handleInputChange}
-                      name="author"
-                      placeholder="Address (required)"
+                      name="zip"
+                      placeholder="Zip Code (required)"
                     />
                     <Input
-                    value={this.state.synopsis}
+                    value={this.state.img}
                     onChange={this.handleInputChange}
-                    name="synopsis"
-                    placeholder="Phone Number (required)"
+                    name="img"
+                    placeholder="Img Url(required)"
                     />
                     <FormBtn
-                      disabled={!(this.state.author && this.state.title)}
+                      disabled={!(this.state.name && this.state.zip)}
                       onClick={this.handleFormSubmit}
                     >
                       Submit Name
                     </FormBtn>
                   </form>
-
                 </Col>
+                {/*// For submit validation
+                <Col size="md-4">
+                  <div>
+                    <h1>Near By Restaurants</h1>
+                  </div>
+                  {this.state.restaurants.length ? (
+                    <List>
+                      {this.state.restaurants.map(restaurant => (
+                        <ListItem key={restaurant._id}>
+                          <Link to={"/restaurants/" + restaurant._id}>
+                            <strong>
+                              {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
+                            </strong>
+                          </Link>
+                          <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
+                        </ListItem>
+                      ))}
+                    </List>
+                  ) : (
+                    <h3>No Results to Display</h3>
+                  )}
+                </Col>*/}
+
               </Row>
             </Container>
           <Footer />
@@ -98,4 +123,4 @@ class SignIn extends Component {
     }
   }
 
-  export default SignIn;
+  export default ResSignUp;

@@ -1,22 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Restaurants from "./pages/Restaurants";
 import Home from "./pages/Home";
+import Management from "./pages/Management";
+import ResSignUp from "./pages/ResSignUp";
+import CusSignIn from "./pages/CusSignIn";
+import Trivia from "./pages/Trivia";
+import Restaurants from "./pages/Restaurants";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Trivia from "./pages/Trivia";
-import SignIn from "./pages/SignIn";
-import WaitingList from "./pages/WaitingList";
+
 
 const App = () =>
   <Router>
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/Management" component={Management} />
+        <Route exact path="/ResSignUp" component={ResSignUp} />
+        <Route exact path="/CusSignIn" component={CusSignIn} />
         <Route exact path="/trivia" component={Trivia} />
         <Route exact path="/restaurants" component={Restaurants} />
-        <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/waitlist" component={WaitingList} />
         <Route exact path="/restaurants/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>

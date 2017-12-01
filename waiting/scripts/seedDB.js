@@ -13,29 +13,29 @@ mongoose.connect(
 
 const restaurantSeed = [
   {
-    name: "The Dead Zone",
-    address: "123 ABC Street",
-    waittime: 20
+    name: "Noodology",
+    zip: "92618",
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
+  },
+  {
+    name: "Habana",
+    zip: "92618",
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
+  },
+  {
+    name: "Urban Seoul",
+    zip: "92612",
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
     name: "The Dead Zone",
-    address: "123 ABC Street",
-    waittime: 20
+    zip: "92612",
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
-    name: "The Dead Zone",
-    address: "123 ABC Street",
-    waittime: 20
-  },
-  {
-    name: "The Dead Zone",
-    address: "123 ABC Street",
-    waittime: 20
-  },
-  {
-    name: "The Dead Zone",
-    address: "123 ABC Street",
-    waittime: 20
+    name: "Fukada",
+    zip: "92604",
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   }
 ];
 
@@ -45,32 +45,27 @@ const userSeed = [
     {
       name: "Jose Morales",
       phone: "123-123-1234",
-      guest: 4,
-      selectedres: "Jose's"
+      guest: 4
     },
     {
       name: "Charles Hu",
       phone: "123-123-1234",
-      guest: 8,
-      selectedres: "Jose's"
+      guest: 8
     },
     {
       name: "Alex",
       phone: "123-123-1234",
-      guest: 5,
-      selectedres: "Jose's"
+      guest: 5
     },
     {
       name: "Micheal",
       phone: "123-123-1234",
-      guest: 2,
-      selectedres: "Jose's"
+      guest: 2
     },
     {
       name: "Jon Grin",
       phone: "123-123-1234",
-      guest: 2,
-      selectedres: "Jose's"
+      guest: 2
     }
   ];
 

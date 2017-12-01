@@ -2,25 +2,21 @@ body {
     background-image: url("../../images/spices.jpg");
     background-color: #cccccc;
     background-repeat:repeat-y;
-    background-size: 100%;   
+    background-size: 100%;
 }
 .container-fluid {
     text-align: center;
 }
-/* Title */
+.row {
+  text-align: center;
+}
 h1 {
     color: #white;
-    /* font-family: 'Passion One', cursive; */
     font-size: 100px;
     text-outline: 5px 5px #ff0000;
-    font-family: 'Lakki Reddy', cursive;    
-   /* font-family: 'Jacques Francois Shadow', cursive; */
-   
-    
-} 
-/* Body */
+}
+
 h4 {
     color: white;
-    font-family: 'Amatic SC', cursive;
     font-size: 50px;
 }

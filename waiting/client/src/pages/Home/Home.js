@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import DeleteBtn from "../../components/DeleteBtn";
+import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -6,17 +8,87 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import NewNav from "../../components/NewNav";
 import Footer from "../../components/Footer";
+import Quiz from "../../components/Quiz";
 import "./Home.css";
 
+class Home extends Component {
+  state = {
+    restaurants: [],
+    name: "",
+    zip: "",
+    img: ""
+  };
 
-const Home = () =>
-<div>
-{/* <NewNav />  we dont need header*/}
-<div className="container-fluid">
-<a href="/restaurants"><h1>WAITING</h1>
-</a>
-    <h4>Welcome to a new dining experience!</h4>
-</div>
-<Footer />
-</div>
+  componentDidMount() {
+    this.loadRestaurants();
+  }
+
+  loadRestaurants = () => {
+    API.getRestaurants()
+      .then(res =>
+        this.setState({ restaurants: res.data, name: "", zip: "", img: "" })
+      )
+      .catch(err => console.log(err));
+  };
+
+  deleteRestaurant = id => {
+    API.deleteRestaurant(id)
+      .then(res => this.loadRestaurants())
+      .catch(err => console.log(err));
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.name && this.state.zip) {
+      API.saveRestaurant({
+        name: this.state.name,
+        address: this.state.zip,
+        img: this.state.img
+      })
+        .then(res => this.loadRestaurants())
+        .catch(err => console.log(err));
+    }
+  };
+
+  render() {
+    return (
+      <div>
+          <Container fluid>
+            <Row>
+              <Col size="md-3" col-lg-offset-3>
+                <div>
+                  <h1>Near By Restaurants</h1>
+                </div>
+                {this.state.restaurants.length ? (
+                  <List>
+                    {this.state.restaurants.map(restaurant => (
+                      <ListItem key={restaurant._id}>
+                        <Link to={"/restaurants/" + restaurant._id}>
+                          <strong>
+                            {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
+                          </strong>
+                        </Link>
+                        <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
+                      </ListItem>
+                    ))}
+                  </List>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+              </Col>
+            </Row>
+          </Container>
+        <Footer />
+      </div>
+    );
+  }
+}
+
 export default Home;
