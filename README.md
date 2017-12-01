@@ -22,6 +22,8 @@ After both installations complete, run the following command in your terminal:
 ```
 mongod
 ```
+
+```
 yarn start
 ```
 
