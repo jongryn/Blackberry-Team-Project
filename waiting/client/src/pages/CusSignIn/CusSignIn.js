@@ -18,6 +18,12 @@ class CusSignIn extends Component {
     };
 
     componentDidMount() {
+      API.getRestaurant(this.props.match.params.id)
+        .then(res => this.setState({ restaurant: res.data }))
+        .catch(err => console.log(err));
+    }
+
+    componentDidMount() {
       this.loadUsers();
     }
 
@@ -48,7 +54,9 @@ class CusSignIn extends Component {
         API.saveUser({
           name: this.state.name,
           phone: this.state.phone,
-          partysize: this.state.partysize
+          partysize: this.state.partysize,
+          checkinto: this.state.checkinto
+
         })
           .then(res => this.loadUsers())
           .catch(err => console.log(err));
@@ -83,6 +91,12 @@ class CusSignIn extends Component {
                     onChange={this.handleInputChange}
                     name="phone"
                     placeholder="Phone Number(required)"
+                    />
+                    <Input
+                    value={this.state.checkinto}
+                    onChange={this.handleInputChange}
+                    name="checkinto"
+                    placeholder={this.state.restaurant.name}
                     />
                     <FormBtn
                       disabled={!(this.state.name && this.state.phone && this.state.partysize)}

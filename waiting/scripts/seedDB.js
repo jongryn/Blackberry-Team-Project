@@ -15,26 +15,31 @@ const restaurantSeed = [
   {
     name: "Noodology",
     zip: "92618",
+    waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
     name: "Habana",
     zip: "92618",
+    waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
     name: "Urban Seoul",
     zip: "92612",
+    waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
     name: "The Dead Zone",
     zip: "92612",
+    waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   },
   {
     name: "Fukada",
     zip: "92604",
+    waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
   }
 ];

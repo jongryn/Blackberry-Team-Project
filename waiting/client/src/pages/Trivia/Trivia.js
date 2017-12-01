@@ -1,7 +1,6 @@
-
 import React from "react";
 import Footer from "../../components/Footer";
-import TrvBtn from "../../components/TrvBtn";
+import Quiz from "../../components/Quiz";
 
 const Trivia = () =>
 <div>
@@ -9,9 +8,9 @@ const Trivia = () =>
         <a href="/waitlist">
             <h1>WAITLIST</h1>
         </a>
-        <h4>Play Trivia!</h4>
-        <TrvBtn />
+        <h4>Lets Play Trivia!</h4>
+        <Quiz />
     </div>
-    <Footer /> 
+    <Footer />
 </div>
 export default Trivia;

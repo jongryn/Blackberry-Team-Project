@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const restaurantSchema = new Schema({
   name: { type: String, required: true },
   zip: { type: String, required: true },
+  waittime: { type: Number, required: true },
   img: { type: String, required: true }
 });
 
