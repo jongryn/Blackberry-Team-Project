@@ -20,7 +20,7 @@ mongod
 
 After both installations complete, run the following command in your terminal:
 
-
+```
 ```
 yarn start
 ```
