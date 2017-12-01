@@ -15,12 +15,13 @@ cd client
 npm install
 yarn install
 cd ..
+mongod
 ``
 
 After both installations complete, run the following command in your terminal:
 
 ```
-mongod
+```
 yarn start
 ```
 
