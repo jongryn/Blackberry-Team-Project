@@ -8,50 +8,50 @@ import "./SignIn.css";
 
 class SignIn extends Component {
     state = {
-      books: [],
+      restaurants: [],
       title: "",
       author: "",
       synopsis: ""
     };
-  
+
     componentDidMount() {
-      this.loadBooks();
+      this.loadRestaurants();
     }
-  
-    loadBooks = () => {
-      API.getBooks()
+
+    loadRestaurants = () => {
+      API.getRestaurants()
         .then(res =>
-          this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+          this.setState({ restaurants: res.data, title: "", author: "", synopsis: "" })
         )
         .catch(err => console.log(err));
     };
-  
-    deleteBook = id => {
-      API.deleteBook(id)
-        .then(res => this.loadBooks())
+
+    deleteRestaurant = id => {
+      API.deleteRestaurant(id)
+        .then(res => this.loadRestaurants())
         .catch(err => console.log(err));
     };
-  
+
     handleInputChange = event => {
       const { name, value } = event.target;
       this.setState({
         [name]: value
       });
     };
-  
+
     handleFormSubmit = event => {
       event.preventDefault();
       if (this.state.title && this.state.author) {
-        API.saveBook({
+        API.saveRestaurant({
           title: this.state.title,
           author: this.state.author,
           synopsis: this.state.synopsis
         })
-          .then(res => this.loadBooks())
+          .then(res => this.loadRestaurants())
           .catch(err => console.log(err));
       }
     };
-  
+
     render() {
       console.log(this.state)
       return (
@@ -60,20 +60,20 @@ class SignIn extends Component {
               <Row>
                 <Col size="md-12">
                   <div>
-                    <h1>Sign in here!</h1>
+                    <h1>Restaurant Signup</h1>
                   </div>
                   <form>
                     <Input
-                      value={this.state.title}
+                      value={this.state.name}
                       onChange={this.handleInputChange}
-                      name="title"
+                      name="name"
                       placeholder="Name (required)"
                     />
                     <Input
-                      value={this.state.author}
+                      value={this.state.address}
                       onChange={this.handleInputChange}
                       name="author"
-                      placeholder="Number of guests in party (required)"
+                      placeholder="Address (required)"
                     />
                     <Input
                     value={this.state.synopsis}
@@ -88,9 +88,7 @@ class SignIn extends Component {
                       Submit Name
                     </FormBtn>
                   </form>
-                  <a href="/trivia">
-                    <h1>Play Trivia!</h1>
-                  </a>
+
                 </Col>
               </Row>
             </Container>
@@ -99,5 +97,5 @@ class SignIn extends Component {
       );
     }
   }
-  
+
   export default SignIn;

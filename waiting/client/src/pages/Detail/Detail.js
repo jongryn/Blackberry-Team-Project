@@ -10,13 +10,13 @@ import Quiz from "../../components/Quiz";
 
 class Detail extends Component {
   state = {
-    book: {}
+    restaurant: {}
   };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+  // When this component mounts, grab the restaurant with the _id of this.props.match.params.id
+  // e.g. localhost:3000/restaurants/599dcb67f0f16317844583fc
   componentDidMount() {
-    API.getBook(this.props.match.params.id)
-      .then(res => this.setState({ book: res.data }))
+    API.getRestaurant(this.props.match.params.id)
+      .then(res => this.setState({ restaurant: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -29,7 +29,7 @@ class Detail extends Component {
           <Col size="md-12">
             <div>
               <h1>
-                {this.state.book.title} for {this.state.book.author}
+                {this.state.restaurant.title} for {this.state.restaurant.author}
               </h1>
             </div>
           </Col>
@@ -39,7 +39,7 @@ class Detail extends Component {
             <article>
               <h1>Play Trivia!</h1>
               {/* <p>
-                {this.state.book.synopsis}
+                {this.state.restaurant.synopsis}
               </p> */}
             </article>
           </Col>
@@ -49,7 +49,7 @@ class Detail extends Component {
           <Col size="md-2">
             <Link to="/">← Back to Authors</Link>
           </Col>
-        </Row> 
+        </Row>
         */}
       </Container>
       <div><Quiz/></div>

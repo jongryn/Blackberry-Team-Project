@@ -13,10 +13,10 @@ const Home = () =>
 <div>
 {/* <NewNav />  we dont need header*/}
 <div className="container-fluid">
-<a href="/books"><h1>WAITING</h1>
+<a href="/restaurants"><h1>WAITING</h1>
 </a>
     <h4>Welcome to a new dining experience!</h4>
 </div>
-<Footer /> 
+<Footer />
 </div>
 export default Home;

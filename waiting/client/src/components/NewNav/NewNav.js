@@ -19,7 +19,7 @@ const NewNav = () => (
             <span className="icon-bar" />
             <span className="icon-bar" />
           </button>
-          <a className="navbar-brand" href="/books">
+          <a className="navbar-brand" href="/restaurants">
             Waiting
           </a>
         </div>
