@@ -68,7 +68,7 @@ class Home extends Component {
           <Row>
               <Col size="md-12">
                 <div>
-                  <h1>Near By Restaurants</h1>
+                  <h1>Nearby Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
                   <List>
