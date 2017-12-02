@@ -13,7 +13,13 @@ import { Link } from "react-router-dom";
 class Detail extends Component {
   state = {
     users: [],
+    name: "",
+    partysize: 0,
     restaurant: {},
+    name: "",
+    zip: "",
+    img: "",
+    waittime: "",
   };
 
   componentDidMount() {
@@ -31,6 +37,7 @@ class Detail extends Component {
       .catch(err => console.log(err));
 
   };
+
   deleteUser = id => {
     API.deleteUser(id)
       .then(res => this.loadUsers())
@@ -44,17 +51,27 @@ class Detail extends Component {
     });
   };
 
+
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.phone && this.state.partysize) {
+
       API.saveUser({
         name: this.state.name,
         phone: this.state.phone,
         partysize: this.state.partysize,
         checkinto: this.state.restaurant.name
       })
-        .then(res => this.loadUsers())
+        .then(res => {
+          this.state.restaurant.waittime=this.state.restaurant.waittime + 5;
+          API.updateRestaurant(this.props.match.params.id, {
+            waittime: this.state.restaurant.waittime
+          })
+          console.log(this.state.restaurant.waittime)
+          this.loadUsers()})
         .catch(err => console.log(err));
+
     }
   };
 
@@ -111,7 +128,7 @@ class Detail extends Component {
                             Phone: {user.phone}<br/>
                             Checked Into: {user.checkinto}
                         </Link>
-                        <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                        <DeleteBtn onClick={() => this.deleteUser(user._id)}  />
                       </ListItem>
                     ))}
                   </List>
