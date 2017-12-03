@@ -42,7 +42,7 @@ export const getQuestions = () => {
             type: LOAD_QUESTIONS
         });
 
-        axios.get('https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple')
+        axios.get('https://opentdb.com/api.php?amount=25&type=multiple')
             .then((response) => {
                 dispatch({
                     type: LOAD_QUESTIONS_SUCCESS,

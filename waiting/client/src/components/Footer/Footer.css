@@ -1,6 +1,6 @@
 footer {
-    position: relative fixed;
-    bottom: 0;
+    position: relative;
+    bottom: 0px;
     width: 100%;
     text-align: center;
     text-shadow:
@@ -13,9 +13,17 @@ footer {
 p {
     color:white;
     font-size: 30px;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 span {
     font-size: 20px;
     color:white;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
