@@ -27,3 +27,17 @@ span {
     font-family: 'Shrikhand', cursive;
     /* font-family: 'Boogaloo', cursive; */
 }
+
+/* Media Queries for mobile devices */
+@media screen and (max-width:640px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    p {
+        font-size: 20px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
