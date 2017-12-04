@@ -102,35 +102,40 @@ const userSeed = [
       phone: "123-123-1234",
       partysize: 4,
       checkinto: "Urban Seoul",
-      userrequest:""
+      userrequest:"",
+      userwait: 5
     },
     {
       name: "Charles Hu",
       phone: "123-123-1234",
       partysize: 8,
       checkinto: "Urban Seoul",
-      userrequest:"Anniversary"
+      userrequest:"Anniversary",
+      userwait: 5
     },
     {
       name: "Alex",
       phone: "123-123-1234",
       partysize: 5,
       checkinto: "Urban Seoul",
-      userrequest:""
+      userrequest:"",
+      userwait: 10
     },
     {
       name: "Micheal",
       phone: "123-123-1234",
       partysize: 2,
       checkinto: "Habana",
-      userrequest:"Highchair"
+      userrequest:"Highchair",
+      userwait: 5
     },
     {
       name: "Jon Grin",
       phone: "123-123-1234",
       partysize: 2,
       checkinto: "Habana",
-      userrequest:"Birthday"
+      userrequest:"Birthday",
+      userwait: 15
     }
   ];
 

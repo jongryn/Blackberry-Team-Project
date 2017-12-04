@@ -7,6 +7,7 @@ const userSchema = new Schema({
   partysize: { type: Number, required: true},
   userrequest: { type: String},
   checkinto: { type: String},
+  userwait: { type: Number},
   versionKey: false
 });
 

@@ -54,18 +54,19 @@ class Detail extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.phone && this.state.partysize) {
+      this.state.restaurant.waittime=this.state.restaurant.waittime + 5;
+      API.updateRestaurant(this.props.match.params.id, {
+        waittime: this.state.restaurant.waittime
 
-      API.saveUser({
-        name: this.state.name,
-        phone: this.state.phone,
-        partysize: this.state.partysize,
-        userrequest: this.state.userrequest,
-        checkinto: this.state.restaurant.name,
       })
         .then(res => {
-          this.state.restaurant.waittime=this.state.restaurant.waittime + 5;
-          API.updateRestaurant(this.props.match.params.id, {
-            waittime: this.state.restaurant.waittime
+          API.saveUser({
+            name: this.state.name,
+            phone: this.state.phone,
+            partysize: this.state.partysize,
+            userrequest: this.state.userrequest,
+            checkinto: this.state.restaurant.name,
+            userwait: this.state.restaurant.waittime
           })
           this.loadUsers()})
         .catch(err => console.log(err));

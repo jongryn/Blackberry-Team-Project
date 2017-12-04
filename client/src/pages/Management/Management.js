@@ -63,16 +63,16 @@ class Management extends Component {
               <Row>
               <Col size="md-3">
                 <div>
-                  <h2>Waiting List</h2>
+                  <h2>Wait List</h2>
                 </div>
                 {this.state.users.length ? (
                   <List>
                     {this.state.users.map(user => (
                       <ListItem key={user._id}>
-                            Name: {user.name} <br/>
-                            Party Size: {user.partysize} <br/>
+                            {user.partysize} {user.name}<br/>
                             Phone: {user.phone}<br/>
-                            Checked Into: {user.checkinto}
+                            Checked Into: {user.checkinto}<br/>
+                            Wait Timer: {user.userwait}
                         <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                       </ListItem>
                     ))}
