@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
+<<<<<<< HEAD
+=======
 import Nav from "../../components/Nav";
 import "./Detail.css";
+>>>>>>> d65e0396f2315052a79326d2da2010b5618e3555
 import Quiz from "../../components/Quiz";
-import DeleteBtn from "../../components/DeleteBtn";
 import { Link } from "react-router-dom";
+import "./Detail.css";
 
 class Detail extends Component {
   state = {
@@ -32,7 +34,7 @@ class Detail extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res =>
-        this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: ""})
+        this.setState({ users: res.data, name: "", partysize: "", phone: "", checkinto: "", userrequest: ""})
       )
       .catch(err => console.log(err));
 
@@ -61,17 +63,16 @@ class Detail extends Component {
         name: this.state.name,
         phone: this.state.phone,
         partysize: this.state.partysize,
-        checkinto: this.state.restaurant.name
+        userrequest: this.state.userrequest,
+        checkinto: this.state.restaurant.name,
       })
         .then(res => {
           this.state.restaurant.waittime=this.state.restaurant.waittime + 5;
           API.updateRestaurant(this.props.match.params.id, {
             waittime: this.state.restaurant.waittime
           })
-          console.log(this.state.restaurant.waittime)
           this.loadUsers()})
         .catch(err => console.log(err));
-
     }
   };
 
@@ -80,41 +81,53 @@ class Detail extends Component {
       <div>
         <Nav />
           <Container fluid>
-            <Row>
-              <Col size="md-6">
+
+              <Col size="md-3">
                 <div>
-                  <h1>Please Check In</h1>
+                  <h2>Please Check In</h2>
                 </div>
                 <form>
+                Name
                   <Input
                     value={this.state.name}
                     onChange={this.handleInputChange}
                     name="name"
-                    placeholder="Name (required)"
+                    placeholder="Required"
                   />
+                  Party Size
                   <Input
                     value={this.state.partysize}
                     onChange={this.handleInputChange}
                     name="partysize"
-                    placeholder="How many people are in your party? (required)"
+                    placeholder="Required"
                   />
+                  Phone Number
                   <Input
                   value={this.state.phone}
                   onChange={this.handleInputChange}
                   name="phone"
-                  placeholder="Phone Number(required)"
+                  placeholder="Required"
                   />
+                  Special requests?
+                  <Input
+                  value={this.state.userrequest}
+                  onChange={this.handleInputChange}
+                  name="userrequest"
+                  placeholder="Birthday, Highchair, Anniversary"
+                  />
+                  <Link to={"/trivia/"}>
                   <FormBtn
                     disabled={!(this.state.name && this.state.phone && this.state.partysize)}
                     onClick={this.handleFormSubmit}
                   >
                     Check In
                   </FormBtn>
+                </Link>
                 </form>
-
-
               </Col>
-              <Col size="md-6">
+
+
+              {/*<Col size="md-6">
                 <div>
                   <h2>For DB Validation</h2>
                   <h2>Detele when done</h2>
@@ -127,7 +140,8 @@ class Detail extends Component {
                             Name: {user.name} <br/>
                             Party Size: {user.partysize} <br/>
                             Phone: {user.phone}<br/>
-                            Checked Into: {user.checkinto}
+                            Checked Into: {user.checkinto}<br/>
+                            Special Request: {user.userrequest}
                         </Link>
                         <DeleteBtn onClick={() => this.deleteUser(user._id)}  />
                       </ListItem>
@@ -136,9 +150,9 @@ class Detail extends Component {
                 ) : (
                   <h3>No Results to Display</h3>
                 )}
-              </Col>
+              </Col>*/}
 
-            </Row>
+
           </Container>
       </div>
     );

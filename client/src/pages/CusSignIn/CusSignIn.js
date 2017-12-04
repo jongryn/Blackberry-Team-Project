@@ -16,6 +16,7 @@ class CusSignIn extends Component {
       name: "",
       partysize: "",
       phone: "",
+      request: ""
     };
 
     componentDidMount() {
@@ -45,7 +46,8 @@ class CusSignIn extends Component {
           name: this.state.name,
           phone: this.state.phone,
           partysize: this.state.partysize,
-          checkinto: this.state.checkinto
+          checkinto: this.state.checkinto,
+
 
         })
           .then(res => this.loadUsers())
@@ -83,6 +85,12 @@ class CusSignIn extends Component {
                     onChange={this.handleInputChange}
                     name="phone"
                     placeholder="Phone Number(required)"
+                    />
+                    <Input
+                    value={this.state.request}
+                    onChange={this.handleInputChange}
+                    name="request"
+                    placeholder="Birthday, Highchair, etc"
                     />
                     <Input
                     value={this.state.checkinto}

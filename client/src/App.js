@@ -17,8 +17,8 @@ const App = () =>
         <Route exact path="/" component={Home} />
         <Route exact path="/Management" component={Management} />
         <Route exact path="/ResSignUp" component={ResSignUp} />
-        <Route exact path="/CusSignIn" component={CusSignIn} />
-        <Route exact path="/users/:id" component={Trivia} />
+        {/*<Route exact path="/CusSignIn" component={CusSignIn} />*/}
+        <Route exact path="/Trivia/" component={Trivia} />
         <Route exact path="/restaurants" component={Restaurants} />
         <Route exact path="/restaurants/:id" component={Detail} />
         <Route component={NoMatch} />

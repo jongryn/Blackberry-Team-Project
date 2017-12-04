@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
-import Footer from "../../components/Footer";
+
 
 const NoMatch = () =>
 (<div>
@@ -14,7 +14,6 @@ const NoMatch = () =>
         </Col>
       </Row>
     </Container>
-  <Footer />
 </div>);
 
 export default NoMatch;
