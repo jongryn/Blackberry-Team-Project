@@ -48,8 +48,9 @@ class Quiz extends React.Component {
 
         return (
             <div className='quiz-header'>
-                <p>Score: { score }</p>
-                <p className='right'>Question {currentQuestion + 1} of {questions.length}</p>
+                <p>Score: { score } </p>
+                <br />
+                <p className='right'> Question {currentQuestion + 1} of {questions.length}</p>
             </div>
         )
     }

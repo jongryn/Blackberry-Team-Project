@@ -4,6 +4,7 @@ const restaurantsController = require("../../controllers/restaurantsController")
 // Matches with "/api/restaurants"
 router.route("/")
   .get(restaurantsController.findAll)
+  .put(restaurantsController.update)
   .post(restaurantsController.create);
 
 // Matches with "/api/restaurants/:id"

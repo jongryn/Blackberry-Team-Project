@@ -13,6 +13,7 @@
 .navbar-brand { 
     padding-left: 40%;
 }
+<<<<<<< HEAD:waiting/client/src/pages/Home/Home.css
 input{    
     width: 100%;
     border-size:border-box;
@@ -26,6 +27,16 @@ input{
     padding: 12px 20px 12px 40px;
     margin-top: 20px;
     color: gray; 
+=======
+h1 {
+    color: white;
+    font-size: 100px;
+}
+
+h4 {
+    color: white;
+    font-size: 50px;
+>>>>>>> d80f649e1f9c3930094b772cb3b80262298e0c7a:client/src/pages/Home/Home.css
 }
 h1 {
     color: white !important;

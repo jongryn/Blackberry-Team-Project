@@ -17,6 +17,9 @@ export default {
   saveRestaurant: function(restaurantData) {
     return axios.post("/api/restaurants", restaurantData);
   },
+  updateRestaurant: function(id, data) {
+    return axios.put("/api/restaurants/" + id, data);
+  },
   // Gets all restaurants
   getUsers: function() {
     return axios.get("/api/users");
