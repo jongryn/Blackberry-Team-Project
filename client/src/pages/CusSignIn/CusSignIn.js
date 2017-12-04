@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
+import Nav from "../../components/Nav";
 import { List, ListItem } from "../../components/List";
 import DeleteBtn from "../../components/DeleteBtn";
 import Footer from "../../components/Footer";
@@ -58,6 +59,7 @@ class CusSignIn extends Component {
       console.log(this.state)
       return (
         <div>
+          <Nav />
             <Container fluid>
               <Row>
                 <Col size="md-4">

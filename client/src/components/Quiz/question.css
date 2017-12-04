@@ -1,6 +1,6 @@
 .question {
     margin: 8px 0;
-    background-color: #FFF7C0;
+    background-color: white;
     border-radius: 32px;
     padding: 32px;
 }
@@ -8,6 +8,10 @@
 .question h3 {
     font-size: 18px;
     font-weight: bold;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 .question ul {
@@ -20,6 +24,10 @@
     border-radius: 8px;
     margin: 16px 0 0 0;
     user-select: none;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 .question li:hover {
