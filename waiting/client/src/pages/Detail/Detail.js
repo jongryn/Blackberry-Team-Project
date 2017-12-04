@@ -4,7 +4,7 @@ import { Col, Row, Container } from "../../components/Grid";
 
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
-
+import Nav from "../../components/Nav";
 import "./Detail.css";
 import Quiz from "../../components/Quiz";
 import DeleteBtn from "../../components/DeleteBtn";
@@ -61,6 +61,7 @@ class Detail extends Component {
   render() {
     return (
       <div>
+        <Nav />
           <Container fluid>
             <Row>
               <Col size="md-6">

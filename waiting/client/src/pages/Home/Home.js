@@ -68,6 +68,7 @@ class Home extends Component {
           <Row>
               <Col size="md-12">
                 <div>
+                  <input type="text" name="search" placeholder="Search..."/>
                   <h1>Nearby Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
