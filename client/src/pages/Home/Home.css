@@ -3,7 +3,6 @@ body {
 =======
 /* body {
     background-image: url("../../images/spices.jpg");
->>>>>>> d65e0396f2315052a79326d2da2010b5618e3555
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
@@ -39,7 +38,6 @@ h1 {
 h4 {
     color: white;
     font-size: 50px;
->>>>>>> d80f649e1f9c3930094b772cb3b80262298e0c7a:client/src/pages/Home/Home.css
 }
 h1 {
     color: white !important;
