@@ -3,11 +3,8 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
-<<<<<<< HEAD
-=======
 import Nav from "../../components/Nav";
 import "./Detail.css";
->>>>>>> d65e0396f2315052a79326d2da2010b5618e3555
 import Quiz from "../../components/Quiz";
 import { Link } from "react-router-dom";
 import "./Detail.css";
