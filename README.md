@@ -17,6 +17,7 @@ yarn install
 cd ..
 mongod
 npm run seed
+verify users and restaurants have been added to DB client
 ``
 
 After both installations complete, run the following command in your terminal:
