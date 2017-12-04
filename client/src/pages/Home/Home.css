@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+body {
+=======
+/* body {
+    background-image: url("../../images/spices.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
 .navbar-inverse {
     background-color: #c41200;
 }
@@ -9,10 +18,9 @@
 .navbar-brand {
     padding-left: 40%;
 }
-
 input{
     width: 100%;
-    border-size:border-box;
+    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 20px;
@@ -24,7 +32,6 @@ input{
     margin-top: 20px;
     color: gray;
 }
-
 h1 {
     color: white;
     font-size: 100px;
