@@ -1,24 +1,16 @@
-<<<<<<< HEAD
-body {
-=======
-/* body {
-    background-image: url("../../images/spices.jpg");
->>>>>>> d65e0396f2315052a79326d2da2010b5618e3555
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-} */
 .navbar-inverse {
     background-color: #c41200;
 }
+
 .navbar-inverse .navbar-brand {
     color: white;
 }
-.navbar-brand { 
+
+.navbar-brand {
     padding-left: 40%;
 }
-<<<<<<< HEAD:waiting/client/src/pages/Home/Home.css
-input{    
+
+input{
     width: 100%;
     border-size:border-box;
     border: 2px solid #ccc;
@@ -30,8 +22,9 @@ input{
     background-repeat:no-repeat;
     padding: 12px 20px 12px 40px;
     margin-top: 20px;
-    color: gray; 
-=======
+    color: gray;
+}
+
 h1 {
     color: white;
     font-size: 100px;
@@ -40,13 +33,11 @@ h1 {
 h4 {
     color: white;
     font-size: 50px;
->>>>>>> d80f649e1f9c3930094b772cb3b80262298e0c7a:client/src/pages/Home/Home.css
 }
+
 h1 {
     color: white !important;
     font-size: 298% !important;
     text-shadow: none !important;
     text-align: center;
-
 }
-
