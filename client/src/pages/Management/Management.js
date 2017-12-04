@@ -30,7 +30,7 @@ class Management extends Component {
           this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: "", userwait: "" })
         )
         .catch(err => console.log(err));
-        console.log(this.props.match.params.id)
+        console.log(this.props.match.params)
     };
 
     deleteUser = id => {

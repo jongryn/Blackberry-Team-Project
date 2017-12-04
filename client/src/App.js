@@ -20,7 +20,7 @@ const App = () =>
         {/*<Route exact path="/CusSignIn" component={CusSignIn} />*/}
         <Route exact path="/Trivia/" component={Trivia} />
         <Route exact path="/restaurants" component={Restaurants} />
-        <Route exact path="/detail/:id" component={Detail} />
+        <Route exact path="/checkin/:id" component={Detail} />
         <Route exact path="/management/:id" component={Management} />
         <Route component={NoMatch} />
       </Switch>

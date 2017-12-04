@@ -44,7 +44,7 @@ class Home extends Component {
                     {this.state.restaurants.map(restaurant => (
                       <Col size="md-4" key={restaurant._id}>
                       <ListItem key={restaurant._id}>
-                        <Link to={"/detail/" + restaurant._id}>
+                        <Link to={"/checkin/" + restaurant.name}>
                         <Row>
                             <Col size="md-6">{restaurant.name}</Col>
                             <Col size="md-6">{restaurant.category}</Col>

@@ -101,28 +101,28 @@ const userSeed = [
       name: "Jose Morales",
       phone: "123-123-1234",
       partysize: 4,
-      checkinto: "Urban Seoul",
+      checkinto: "Noodology",
       userrequest:"",
       userwait: 5,
-      id: "5a24e682534cc25f11989042"
+      id: "5a24e89810c9675f8612fa94"
     },
     {
       name: "Charles Hu",
       phone: "123-123-1234",
       partysize: 8,
-      checkinto: "Urban Seoul",
+      checkinto: "Noodology",
       userrequest:"Anniversary",
       userwait: 5,
-      id: "5a24e682534cc25f11989042"
+      id: "5a24e89810c9675f8612fa94"
     },
     {
       name: "Alex",
       phone: "123-123-1234",
       partysize: 5,
-      checkinto: "Urban Seoul",
+      checkinto: "Noodology",
       userrequest:"",
       userwait: 10,
-      id: "5a24e682534cc25f11989042"
+      id: "5a24e89810c9675f8612fa94"
     },
     {
       name: "Micheal",

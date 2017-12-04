@@ -102,7 +102,7 @@ class ResSignUp extends Component {
                     <List>
                       {this.state.restaurants.map(restaurant => (
                         <ListItem key={restaurant._id}>
-                          <Link to={"/Management/" + restaurant._id}>
+                          <Link to={"/Management/" + restaurant.name}>
                             <strong>
                               {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
                             </strong>
