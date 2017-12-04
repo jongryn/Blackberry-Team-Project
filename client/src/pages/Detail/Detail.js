@@ -4,6 +4,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import "./Detail.css";
 import Quiz from "../../components/Quiz";
 import { Link } from "react-router-dom";
 import "./Detail.css";
@@ -153,6 +155,7 @@ class Detail extends Component {
 
 
           </Container>
+        <Footer />
       </div>
     );
   }

@@ -13,6 +13,7 @@ const Nav = () =>
         <a href="/" className="navbar-brand">
           Waiting
         </a>
+        <input type="text" name="search" placeholder="Search..."/>
       </div>
     </div>
   </nav>;
