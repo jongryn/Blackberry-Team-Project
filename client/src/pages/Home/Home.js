@@ -6,8 +6,7 @@ import { List, ListItem } from "../../components/List";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import "./Home.css";
-import CheckInModal from "../../components/CheckInModal";
-import Center from 'react-center';
+
 
 class Home extends Component {
   state = {
@@ -44,14 +43,22 @@ class Home extends Component {
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="md-6">
+                      <Col size="md-4" key={restaurant._id}>
                       <ListItem key={restaurant._id}>
-                        <Link to={"/restaurants/" + restaurant._id}>
-                            {restaurant.name} <br/>
-                            {restaurant.category} <br/>
-                            {restaurant.city}, {restaurant.zip} <br/>
-                            Current wait time: {restaurant.waittime} <br/>
-                            <img alt='res' src= {restaurant.img} />
+                        <Link to={"/detail/" + restaurant._id}>
+                        <Row>
+                            <Col size="md-6">{restaurant.name}</Col>
+                            <Col size="md-6">{restaurant.category}</Col>
+                        </Row>
+                        <Row>
+                        <Col size="md-4">
+                        <img alt='res' src= {restaurant.img} /></Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-6">{restaurant.city}, {restaurant.zip}</Col>
+                            <Col size="md-6">{restaurant.waittime}</Col>
+                            <br/><br/>
+                            </Row>
                         </Link>
                       </ListItem>
                       </Col>

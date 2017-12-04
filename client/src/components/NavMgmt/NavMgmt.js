@@ -1,7 +1,7 @@
 import React from "react";
-import "./Nav.css";
+import "./NavMgmt.css";
 
-const Nav = () =>
+const NavMgmt = () =>
   <nav className="navbar navbar-inverse navbar-top">
     <div className="container-fluid">
       <div className="navbar-header">
@@ -11,10 +11,10 @@ const Nav = () =>
           <span className="icon-bar" />
         </button>
         <a href="/" className="navbar-brand">
-          Waiting
+          waiting
         </a>
       </div>
     </div>
   </nav>;
 
-export default Nav;
+export default NavMgmt;

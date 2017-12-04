@@ -60,13 +60,15 @@ class Detail extends Component {
 
       })
         .then(res => {
+          console.log*
           API.saveUser({
             name: this.state.name,
             phone: this.state.phone,
             partysize: this.state.partysize,
             userrequest: this.state.userrequest,
             checkinto: this.state.restaurant.name,
-            userwait: this.state.restaurant.waittime
+            userwait: this.state.restaurant.waittime,
+            id: this.props.match.params.id
           })
           this.loadUsers()})
         .catch(err => console.log(err));

@@ -103,7 +103,8 @@ const userSeed = [
       partysize: 4,
       checkinto: "Urban Seoul",
       userrequest:"",
-      userwait: 5
+      userwait: 5,
+      id: "5a24e682534cc25f11989042"
     },
     {
       name: "Charles Hu",
@@ -111,7 +112,8 @@ const userSeed = [
       partysize: 8,
       checkinto: "Urban Seoul",
       userrequest:"Anniversary",
-      userwait: 5
+      userwait: 5,
+      id: "5a24e682534cc25f11989042"
     },
     {
       name: "Alex",
@@ -119,7 +121,8 @@ const userSeed = [
       partysize: 5,
       checkinto: "Urban Seoul",
       userrequest:"",
-      userwait: 10
+      userwait: 10,
+      id: "5a24e682534cc25f11989042"
     },
     {
       name: "Micheal",
@@ -127,7 +130,8 @@ const userSeed = [
       partysize: 2,
       checkinto: "Habana",
       userrequest:"Highchair",
-      userwait: 5
+      userwait: 5,
+      id: "5a24e682534cc25f11989042"
     },
     {
       name: "Jon Grin",
@@ -135,7 +139,8 @@ const userSeed = [
       partysize: 2,
       checkinto: "Habana",
       userrequest:"Birthday",
-      userwait: 15
+      userwait: 15,
+      id: "5a24e682534cc25f11989042"
     }
   ];
 

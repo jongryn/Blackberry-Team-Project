@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import Footer from "../../components/Footer";
 import "./Management.css";
+import NavMgmt from "../../components/NavMgmt";
 
 
 class Management extends Component {
@@ -13,20 +14,23 @@ class Management extends Component {
       users: [],
       name: "",
       phone: "",
-      guest: "",
-      selectedres: ""
+      partysize: "",
+      checkinto: "",
+      userwait: 0,
     };
 
     componentDidMount() {
       this.loadUsers();
+
     }
 
     loadUsers = () => {
-      API.getUsers()
+      API.getUser(this.props.match.params.id)
         .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: "" })
+          this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: "", userwait: "" })
         )
         .catch(err => console.log(err));
+        console.log(this.props.match.params.id)
     };
 
     deleteUser = id => {
@@ -34,6 +38,15 @@ class Management extends Component {
         .then(res => this.loadUsers())
         .catch(err => console.log(err));
     };
+
+    /*increaseTimer = id => {
+      console.log(params.id.user.userwait)
+      API.updateUser (id, {
+        userwait: this.state.userwait
+      })
+        .then(res => this.loadUsers())
+        .catch(err => console.log(err));
+    };*/
 
     handleInputChange = event => {
       const { name, value } = event.target;
@@ -56,27 +69,38 @@ class Management extends Component {
     };
 
     render() {
-      console.log(this.state)
       return (
         <div>
+        <NavMgmt />
             <Container fluid>
               <Row>
-              <Col size="md-3">
+              <Col size="md-12">
                 <div>
                   <h2>Wait List</h2>
                 </div>
                 {this.state.users.length ? (
+
                   <List>
                     {this.state.users.map(user => (
                       <ListItem key={user._id}>
-                            {user.partysize} {user.name}<br/>
-                            Phone: {user.phone}<br/>
-                            Checked Into: {user.checkinto}<br/>
-                            Wait Timer: {user.userwait}
-                        <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                            <Row>
+                            <Col size="md-2">
+                            <h4>{user.partysize}</h4>
+                            </Col>
+                            <Col size="md-6">
+                            <h4>{user.name}</h4>
+                            </Col>
+                            <Col size="md-2"
+                            ><h4>{user.userwait}</h4>
+                            </Col>
+                            <Col size="md-1">
+                            <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                            </Col>
+                            </Row>
                       </ListItem>
                     ))}
                   </List>
+
                 ) : (
                   <h3>No Results to Display</h3>
                 )}

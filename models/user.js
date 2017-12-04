@@ -8,6 +8,7 @@ const userSchema = new Schema({
   userrequest: { type: String},
   checkinto: { type: String},
   userwait: { type: Number},
+  id: { type: String},
   versionKey: false
 });
 
