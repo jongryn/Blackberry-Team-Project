@@ -1,12 +1,16 @@
 .next-button {
-    background-color: #FA7C92;
+    background-color: #EE595D;
     color: white;
     font-size: 18px;
     font-weight: bold;
     padding: 16px;
     border-radius: 2px;
-    float: right;
+    float: center;
     cursor: pointer;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 .next-button:hover {
@@ -17,13 +21,18 @@
     font-size: 18px;
     color: #FA7C92;
     font-weight: bold;
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 p {
     display: inline-block;
     font-size: 18px;
-}
-
-.right {
-    float: right;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
