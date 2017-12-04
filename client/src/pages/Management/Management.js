@@ -61,21 +61,18 @@ class Management extends Component {
         <div>
             <Container fluid>
               <Row>
-              <Col size="md-4">
-              {/*For testing*/}
+              <Col size="md-3">
                 <div>
-                  <h1>Waiting List</h1>
+                  <h2>Waiting List</h2>
                 </div>
                 {this.state.users.length ? (
                   <List>
                     {this.state.users.map(user => (
                       <ListItem key={user._id}>
-                        <Link to={"/users/" + user._id}>
                             Name: {user.name} <br/>
                             Party Size: {user.partysize} <br/>
                             Phone: {user.phone}<br/>
                             Checked Into: {user.checkinto}
-                        </Link>
                         <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                       </ListItem>
                     ))}
@@ -86,7 +83,7 @@ class Management extends Component {
               </Col>
               </Row>
             </Container>
-          <Footer />
+
         </div>
       );
     }

@@ -5,6 +5,7 @@ const userSchema = new Schema({
   name: { type: String, required: true },
   phone: { type: String, required: true },
   partysize: { type: Number, required: true},
+  userrequest: { type: String},
   checkinto: { type: String},
   versionKey: false
 });

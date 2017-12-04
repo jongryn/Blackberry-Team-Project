@@ -20,7 +20,6 @@ class Home extends Component {
     waittime: "",
   };
 
-
   componentDidMount() {
     this.loadRestaurants();
   }
@@ -28,36 +27,9 @@ class Home extends Component {
   loadRestaurants = () => {
     API.getRestaurants()
       .then(res =>
-        this.setState({ restaurants: res.data, name: "", zip: "", img: "", waittime: ""  })
+        this.setState({ restaurants: res.data, name: "", category: "", city: "", zip: "", img: "", waittime: ""  })
       )
       .catch(err => console.log(err));
-  };
-
-  deleteRestaurant = id => {
-    API.deleteRestaurant(id)
-      .then(res => this.loadRestaurants())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.name && this.state.zip) {
-      API.saveRestaurant({
-        name: this.state.name,
-        address: this.state.zip,
-        waittime: this.state.waittime,
-        img: this.state.img
-      })
-        .then(res => this.loadRestaurants())
-        .catch(err => console.log(err));
-    }
   };
 
   render() {
@@ -77,7 +49,8 @@ class Home extends Component {
                       <ListItem key={restaurant._id}>
                         <Link to={"/restaurants/" + restaurant._id}>
                             {restaurant.name} <br/>
-                            {restaurant.zip} <br/>
+                            {restaurant.category} <br/>
+                            {restaurant.city}, {restaurant.zip} <br/>
                             Current wait time: {restaurant.waittime} <br/>
                             <img alt='res' src= {restaurant.img} />
                         </Link>
@@ -96,7 +69,4 @@ class Home extends Component {
     );
   }
 }
-
-
-
 export default Home;
