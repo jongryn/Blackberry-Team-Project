@@ -12,7 +12,6 @@ const Nav = () =>
         </button>
         <strong><a href="/" className="navbar-brand">
           buzzr.
-        <img src="../images/buzzr_bee.png" style={{width:100, marginTop: -7}} />
         </a>
         </strong>
         <input type="text" name="search" placeholder="Search..."/>
