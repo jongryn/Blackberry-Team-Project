@@ -6,10 +6,10 @@ import { Input, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
 import DeleteBtn from "../../components/DeleteBtn";
 import Footer from "../../components/Footer";
-import "./ResSignUp.css";
+import "./restaurantsignup.css";
+import Nav from "../../components/Nav";
 
-
-class ResSignUp extends Component {
+class restaurantsignup extends Component {
     state = {
       restaurants: [],
       name: "",
@@ -60,9 +60,10 @@ class ResSignUp extends Component {
     render() {
       return (
         <div>
+        <Nav />
             <Container fluid>
               <Row>
-                <Col size="md-6">
+                <Col size="md-2">
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
@@ -72,6 +73,18 @@ class ResSignUp extends Component {
                       onChange={this.handleInputChange}
                       name="name"
                       placeholder="Name (required)"
+                    />
+                    <Input
+                      value={this.state.category}
+                      onChange={this.handleInputChange}
+                      name="category"
+                      placeholder="Zip Code (required)"
+                    />
+                    <Input
+                      value={this.state.zip}
+                      onChange={this.handleInputChange}
+                      name="zip"
+                      placeholder="Zip Code (required)"
                     />
                     <Input
                       value={this.state.zip}
@@ -94,7 +107,7 @@ class ResSignUp extends Component {
                   </form>
                 </Col>
                 // For submit validation
-                <Col size="md-4">
+                <Col size="md-2">
                   <div>
                     <h1>Near By Restaurants</h1>
                   </div>
@@ -102,7 +115,7 @@ class ResSignUp extends Component {
                     <List>
                       {this.state.restaurants.map(restaurant => (
                         <ListItem key={restaurant._id}>
-                          <Link to={"/Management/" + restaurant.name}>
+                          <Link to={"/Management/" + restaurant._id}>
                             <strong>
                               {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
                             </strong>
@@ -124,4 +137,4 @@ class ResSignUp extends Component {
     }
   }
 
-  export default ResSignUp;
+  export default restaurantsignup;
