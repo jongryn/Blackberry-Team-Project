@@ -48,6 +48,8 @@ class restaurantsignup extends Component {
       if (this.state.name && this.state.zip) {
         API.saveRestaurant({
           name: this.state.name,
+          category: this.state.category,
+          city: this.state.city,
           zip: this.state.zip,
           img: this.state.img,
           waittime: this.state.waittime
@@ -62,36 +64,41 @@ class restaurantsignup extends Component {
         <div>
         <Nav />
             <Container fluid>
-              <Row>
-                <Col size="md-2">
+              <Row className="formpadding">
+                <Col size="md-4">
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
                   <form>
+                  Restaurant Name
                     <Input
                       value={this.state.name}
                       onChange={this.handleInputChange}
                       name="name"
-                      placeholder="Name (required)"
+                      placeholder="Required"
                     />
+                    Category
                     <Input
                       value={this.state.category}
                       onChange={this.handleInputChange}
                       name="category"
-                      placeholder="Zip Code (required)"
+                      placeholder="Required"
                     />
+                    City
+                    <Input
+                      value={this.state.city}
+                      onChange={this.handleInputChange}
+                      name="city"
+                      placeholder="Required"
+                    />
+                    Zip
                     <Input
                       value={this.state.zip}
                       onChange={this.handleInputChange}
                       name="zip"
-                      placeholder="Zip Code (required)"
+                      placeholder="Required"
                     />
-                    <Input
-                      value={this.state.zip}
-                      onChange={this.handleInputChange}
-                      name="zip"
-                      placeholder="Zip Code (required)"
-                    />
+                    Imgur URL
                     <Input
                     value={this.state.img}
                     onChange={this.handleInputChange}
@@ -106,8 +113,7 @@ class restaurantsignup extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                // For submit validation
-                <Col size="md-2">
+                <Col size="xs-9">
                   <div>
                     <h1>Near By Restaurants</h1>
                   </div>
@@ -117,10 +123,11 @@ class restaurantsignup extends Component {
                         <ListItem key={restaurant._id}>
                           <Link to={"/Management/" + restaurant._id}>
                             <strong>
-                              {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
+                              Log into {restaurant.name}
+                              <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} /><br/>
+                              <img src= {restaurant.img} />
                             </strong>
                           </Link>
-                          <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
                         </ListItem>
                       ))}
                     </List>
