@@ -1,3 +1,22 @@
+<<<<<<< HEAD
 .col-signinform {
   margin-top: 100px;
 }
+=======
+.col-detailspacing {
+    margin-top: 30%;
+}
+h2 {
+    color: gray;
+}
+form {
+    color: gray;
+}
+.btn.btn-success {
+    background-color: #c41200 !important;
+    border-color: gray !important;
+}
+.btn.btn-success:active {
+    background-color: #dfc12a !important;
+}
+>>>>>>> 9ef21805f11e29d9932277ae211d2bf7764a9936

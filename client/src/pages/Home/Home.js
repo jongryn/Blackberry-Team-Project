@@ -34,32 +34,37 @@ class Home extends Component {
       <div>
       <Nav />
           <Container fluid>
-
-              <Col size="md-12">
+          <Row>
+              <Col size="sm-12 md-12 homespacing">
                 <div>
                   <h1>Nearby Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="md-3">
-
-                        <Link to={"/checkin/" + restaurant.name}>
+                      <Col size="sm-10 md-10" key={restaurant._id}>
+                      <ListItem key={restaurant._id}>
                         <Row>
-                            {restaurant.name}
-                            {restaurant.category}
+                          <Col size="xs-6 md-6">
+                            <Link to={"/checkin/" + restaurant.name}>
+                              <img alt='res' src={restaurant.img} />
+                            </Link>
+                          </Col>
+                          <Col size="xs-6 md-6 right">
+                            <Link to={"/checkin/" + restaurant.name}>
+                              {restaurant.name}
+                              <br />
+                              {restaurant.category}
+                              <br />
+                              {restaurant.city}, {restaurant.zip}
+                              <br />
+                              Est. Wait Time: {restaurant.waittime} min.
+                              <br/><br/>
+                            </Link>
+                          </Col>
                         </Row>
-                        <Row>
-                            {restaurant.city}, {restaurant.zip}
-                            {restaurant.waittime}
-                            <br/><br/>
-                            </Row>
-                            <Row>
-
-                            <img alt='res' src={restaurant.img}/>
-                            </Row>
-                        </Link>
-
+                       <hr/>
+                      </ListItem>
                       </Col>
                     ))}
                   </List>
@@ -67,7 +72,7 @@ class Home extends Component {
                   <h3>No Results to Display</h3>
                 )}
               </Col>
-
+            </Row>
           </Container>
         <Footer />
       </div>

@@ -1,18 +1,26 @@
-.navbar-inverse {
-    background-color: #c41200;
-
+.navbar-brand {
+    padding-left: 40%;
+    color: #dfc12a !important;
 }
 
+.navbar-inverse {
+    position: fixed;
+    background-color: #151515 !important;
+    z-index: 1;
+    width: 100%;
+    background-color: #c41200;
+}
 .navbar-inverse .navbar-brand {
     color: white;
-
 }
 .logo {
   text-align: left;
 }
-
-.navbar-brand {
-    padding-left: 40%;
+.navbar-header {
+    width: 100;
+}
+.collapsed.navbar-toggle {
+    margin-right: 4%;
 }
 .navbar {
   padding-bottom: 0px;

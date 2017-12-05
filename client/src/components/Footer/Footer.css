@@ -2,11 +2,15 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 10%;
     width: 100%;
-    background-color: #c41200;
-    color: white;
+    background-color: #151515;
+    color: gray;
     text-align: center;
 }
 p {
     margin: 1px;
+    margin-top: 6%;
+    margin-right: -10%;
+    text-shadow: none !important;
 }
