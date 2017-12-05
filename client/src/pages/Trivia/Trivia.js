@@ -5,6 +5,7 @@ import Quiz from "../../components/Quiz";
 import "./Trivia.css";
 
 const Trivia = () =>
+
 <div>
   <Nav />
     <div className="container-fluid">

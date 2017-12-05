@@ -44,7 +44,7 @@ class Home extends Component {
                     {this.state.restaurants.map(restaurant => (
                       <Col size="md-3">
 
-                        <Link to={"/checkin/" + restaurant._id}>
+                        <Link to={"/checkin/" + restaurant.name}>
                         <Row>
                             {restaurant.name}
                             {restaurant.category}

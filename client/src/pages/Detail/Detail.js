@@ -6,9 +6,6 @@ import { Input, FormBtn } from "../../components/Form";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import "./Detail.css";
-import Quiz from "../../components/Quiz";
-import { Link } from "react-router-dom";
-import "./Detail.css";
 
 class Detail extends Component {
   state = {
@@ -72,12 +69,14 @@ class Detail extends Component {
             userwait: this.state.restaurant.waittime,
             id: this.props.match.params.id
           })
-          this.loadUsers()})
+          this.props.history.push('/Trivia')})
+
         .catch(err => console.log(err));
     }
   };
 
   render() {
+
     return (
       <div>
         <Nav />
@@ -116,14 +115,14 @@ class Detail extends Component {
                   name="userrequest"
                   placeholder="Birthday, Highchair, Anniversary"
                   />
-                  <Link to={"/trivia/"}>
+
                   <FormBtn
                     disabled={!(this.state.name && this.state.phone && this.state.partysize)}
                     onClick={this.handleFormSubmit}
                   >
                     Check In
                   </FormBtn>
-                </Link>
+
                 </form>
               </Col>
 
