@@ -1,11 +1,18 @@
-.navbar-inverse {
-    background-color: red;
-}
-
-.navbar-inverse .navbar-brand {
-    color: white;
-}
-
 .navbar-brand {
     padding-left: 40%;
+    color: #dfc12a !important;
+    
+}
+
+.navbar-inverse {
+    position: fixed;
+    background-color: #151515 !important;
+    z-index: 1;
+    width: 100%;
+}
+.navbar-header {
+    width: 100%;
+}
+.collapsed.navbar-toggle {
+    margin-right: -4%;
 }

@@ -10,9 +10,10 @@ const Nav = () =>
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/" className="navbar-brand">
-          Waiting
+        <strong><a href="/" className="navbar-brand">
+          buzzr.
         </a>
+        </strong>
         <input type="text" name="search" placeholder="Search..."/>
       </div>
     </div>

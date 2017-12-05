@@ -35,30 +35,35 @@ class Home extends Component {
       <Nav />
           <Container fluid>
           <Row>
-              <Col size="md-12">
+              <Col size="sm-12 md-12 homespacing">
                 <div>
                   <h1>Nearby Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="md-4" key={restaurant._id}>
+                      <Col size="sm-10 md-10" key={restaurant._id}>
                       <ListItem key={restaurant._id}>
-                        <Link to={"/checkin/" + restaurant.name}>
                         <Row>
-                            <Col size="md-6">{restaurant.name}</Col>
-                            <Col size="md-6">{restaurant.category}</Col>
+                          <Col size="xs-6 md-6">
+                            <Link to={"/checkin/" + restaurant.name}>
+                              <img alt='res' src={restaurant.img} />
+                            </Link>
+                          </Col>
+                          <Col size="xs-6 md-6 right">
+                            <Link to={"/checkin/" + restaurant.name}>
+                              {restaurant.name}
+                              <br />
+                              {restaurant.category}
+                              <br />
+                              {restaurant.city}, {restaurant.zip}
+                              <br />
+                              Est. Wait Time: {restaurant.waittime} min.
+                              <br/><br/>
+                            </Link>
+                          </Col>
                         </Row>
-                        <Row>
-                        <Col size="md-4">
-                        <img alt='res' src= {restaurant.img} /></Col>
-                        </Row>
-                        <Row>
-                            <Col size="md-6">{restaurant.city}, {restaurant.zip}</Col>
-                            <Col size="md-6">{restaurant.waittime}</Col>
-                            <br/><br/>
-                            </Row>
-                        </Link>
+                       <hr/>
                       </ListItem>
                       </Col>
                     ))}

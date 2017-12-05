@@ -1,6 +1,6 @@
 .list-overflow-container {
   max-height: Auto;
-  border: 1px #DDDDDD solid;
+  border: 0px #DDDDDD solid;
   border-radius: 4px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -21,7 +21,7 @@
 }
 
 .list-overflow-container li a {
-  color: #2A878C;
+  color: white;
 }
 
 .list-overflow-container li:first-child {
@@ -30,4 +30,10 @@
 
 .list-overflow-container li:last-child {
   border-bottom: none;
+}
+
+/* ListItem.js */
+.list-group-item {
+  background-color: #151515;
+  color: white;
 }

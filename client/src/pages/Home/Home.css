@@ -1,27 +1,23 @@
 body {
+    background-color: #151515;
     /* background-image: url("../../images/spices.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed; */
 }
-.navbar-inverse {
-    position: fixed;
-    background-color: #c41200;
-    z-index: 1;
-    width: 100%;
-}
 
-.navbar-inverse .navbar-brand {
-    color: white;
+/* Body */
+/* <Col size="md-12 homespacing"> */
+.col-homespacing {
+    margin-top: 22%;
 }
-
 input{
-    width: 100%;
+    width: 108%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 20px;
-    background: white;
+    background: #fafafa;
     padding: 12px 20px -2px 10px;
     color: gray;
 }
@@ -30,4 +26,15 @@ h1 {
     font-size: 298% !important;
     text-shadow: none !important;
     text-align: center;
+}
+
+/* List */
+img {
+    width: 60%;
+}
+hr {
+    width: 100%;
+}
+.col-right {
+    float: right;
 }
