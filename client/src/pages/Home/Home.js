@@ -34,7 +34,7 @@ class Home extends Component {
       <div>
       <Nav />
           <Container fluid>
-          <Row>
+
               <Col size="md-12">
                 <div>
                   <h1>Nearby Restaurants</h1>
@@ -42,24 +42,24 @@ class Home extends Component {
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="md-4" key={restaurant._id}>
-                      <ListItem key={restaurant._id}>
-                        <Link to={"/checkin/" + restaurant.name}>
+                      <Col size="md-3">
+
+                        <Link to={"/checkin/" + restaurant._id}>
                         <Row>
-                            <Col size="md-6">{restaurant.name}</Col>
-                            <Col size="md-6">{restaurant.category}</Col>
+                            {restaurant.name}
+                            {restaurant.category}
                         </Row>
                         <Row>
-                        <Col size="md-4">
-                        <img alt='res' src= {restaurant.img} /></Col>
-                        </Row>
-                        <Row>
-                            <Col size="md-6">{restaurant.city}, {restaurant.zip}</Col>
-                            <Col size="md-6">{restaurant.waittime}</Col>
+                            {restaurant.city}, {restaurant.zip}
+                            {restaurant.waittime}
                             <br/><br/>
                             </Row>
+                            <Row>
+
+                            <img alt='res' src={restaurant.img}/>
+                            </Row>
                         </Link>
-                      </ListItem>
+
                       </Col>
                     ))}
                   </List>
@@ -67,7 +67,7 @@ class Home extends Component {
                   <h3>No Results to Display</h3>
                 )}
               </Col>
-            </Row>
+
           </Container>
         <Footer />
       </div>
