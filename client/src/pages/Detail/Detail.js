@@ -82,11 +82,7 @@ class Detail extends Component {
         <Nav />
           <Container fluid>
 
-<<<<<<< HEAD
               <Col size="md-4 signinform">
-=======
-              <Col size="sm-3 md-3 detailspacing">
->>>>>>> 9ef21805f11e29d9932277ae211d2bf7764a9936
                 <div>
                   <h2>Please Check In</h2>
                 </div>
