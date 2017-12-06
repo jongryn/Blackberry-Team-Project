@@ -81,8 +81,8 @@ class Detail extends Component {
       <div>
         <Nav />
           <Container fluid>
-
               <Col size="md-4 signinform">
+              <Col size="sm-3 md-3 detailspacing">
                 <div>
                   <h2>Please Check In</h2>
                 </div>
@@ -125,6 +125,8 @@ class Detail extends Component {
 
                 </form>
               </Col>
+              </Col>
+
 
 
               {/*<Col size="md-6">
