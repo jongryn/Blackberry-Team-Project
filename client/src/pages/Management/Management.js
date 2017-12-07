@@ -10,43 +10,50 @@ import Nav from "../../components/Nav";
 
 
 class Management extends Component {
-    state = {
-      users: [],
-      name: "",
-      phone: "",
-      partysize: "",
-      checkinto: "",
-      userwait: 0,
-    };
+  state = {
+    users: [],
+    name: "",
+    partysize: 0,
+    userwait: "",
+  };
 
     componentDidMount() {
       this.loadUsers();
-
     }
 
     loadUsers = () => {
       API.getUser(this.props.match.params.id)
         .then(res =>
-          this.setState({ users: res.data, name: "", phone: "", partysize: "", checkinto: "", userwait: "" })
+          this.setState({ users: res.data})
         )
         .catch(err => console.log(err));
-        console.log(this.props.match.params)
+        this.loadRestaurants();
     };
 
+    loadRestaurants() {
+      API.loadRestaurant(this.props.match.params.id)
+      .then(res => this.setState({ restaurant: res.data}))
+      .catch(err => console.log(err));
+
+    }
     deleteUser = id => {
+      this.state.user.userwait=this.state.user.userwait - 5;
+      API.updateRestaurant(this.props.match.params.id, {
+        waittime: this.state.userwait
+      })
       API.deleteUser(id)
         .then(res => this.loadUsers())
         .catch(err => console.log(err));
     };
 
-    /*increaseTimer = id => {
-      console.log(params.id.user.userwait)
+    increaseTimer = id => {
+      this.state.userwait=this.state.userwait += 5
       API.updateUser (id, {
         userwait: this.state.userwait
       })
         .then(res => this.loadUsers())
         .catch(err => console.log(err));
-    };*/
+    };
 
     handleInputChange = event => {
       const { name, value } = event.target;
@@ -80,7 +87,7 @@ class Management extends Component {
                 </div>
                 <Row>
                 <Col size="md-2 xs-2"># of Guest</Col>
-                <Col size="md-7 xs-7">Name</Col>
+                <Col size="md-8 xs-6">Name</Col>
                 <Col size="md-1 xs-1">Wait Time</Col>
                 <Col size="md-1 xs-1"></Col>
                 </Row>
@@ -101,6 +108,7 @@ class Management extends Component {
                             </Col>
                             <Col size="md-1 xs-1">
                             <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                            <DeleteBtn onClick={() => this.increaseTimer(user._id)} />
                             </Col>
                             </Row>
                       </ListItem>

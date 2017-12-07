@@ -20,10 +20,11 @@ class Detail extends Component {
   };
 
   componentDidMount() {
-    API.getRestaurant(this.props.match.params.id)
+    API.loadRestaurant(this.props.match.params.id)
       .then(res => this.setState({ restaurant: res.data }))
       .catch(err => console.log(err));
       this.loadUsers();
+      console.log(this.state.restaurant.waittime);
   }
 
   loadUsers = () => {
@@ -59,7 +60,7 @@ class Detail extends Component {
 
       })
         .then(res => {
-          console.log*
+          console.log(this.state.restaurant.waittime);
           API.saveUser({
             name: this.state.name,
             phone: this.state.phone,
@@ -76,7 +77,6 @@ class Detail extends Component {
   };
 
   render() {
-
     return (
       <div>
         <Nav />
@@ -114,45 +114,13 @@ class Detail extends Component {
                   name="userrequest"
                   placeholder="Birthday, Highchair, Anniversary"
                   />
-
                   <FormBtn
                     disabled={!(this.state.name && this.state.phone && this.state.partysize)}
-                    onClick={this.handleFormSubmit}
-                  >
+                    onClick={this.handleFormSubmit}>
                     Check In
                   </FormBtn>
-
                 </form>
               </Col>
-
-
-
-              {/*<Col size="md-6">
-                <div>
-                  <h2>For DB Validation</h2>
-                  <h2>Detele when done</h2>
-                </div>
-                {this.state.users.length ? (
-                  <List>
-                    {this.state.users.map(user => (
-                      <ListItem key={user._id}>
-                        <Link to={"/users/" + user._id}>
-                            Name: {user.name} <br/>
-                            Party Size: {user.partysize} <br/>
-                            Phone: {user.phone}<br/>
-                            Checked Into: {user.checkinto}<br/>
-                            Special Request: {user.userrequest}
-                        </Link>
-                        <DeleteBtn onClick={() => this.deleteUser(user._id)}  />
-                      </ListItem>
-                    ))}
-                  </List>
-                ) : (
-                  <h3>No Results to Display</h3>
-                )}
-              </Col>*/}
-
-
           </Container>
         <Footer />
       </div>

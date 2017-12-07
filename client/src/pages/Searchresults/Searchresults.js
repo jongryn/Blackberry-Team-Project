@@ -18,24 +18,8 @@ class Home extends Component {
     waittime: "",
   };
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-      API.getRestaurant({
-        name: this.state.name,
-      })
-        .then(res => this.searchRestaurants(this.state.name))
-        .catch(err => console.log(err));
-  };
-
   componentDidMount() {
-    this.loadRestaurants();
+    this.searchRestaurants();
   }
 
   loadRestaurants = () => {
@@ -46,9 +30,9 @@ class Home extends Component {
       .catch(err => console.log(err));
   };
 
-  searchRestaurants = id => {
-    console.log(id)
-    API.getRestaurant(id)
+  searchRestaurants = () => {
+    console.log(this.props.match.params.id)
+    API.getRestaurant(this.props.match.params.id)
       .then(res =>
         this.setState({ restaurants: res.data, name: "", category: "", city: "", zip: "", img: "", waittime: ""  })
       )
@@ -63,29 +47,28 @@ class Home extends Component {
           <Row>
               <Col size="sm-12 md-12" className='homespacing'>
               <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Search"/>
+                    <input type="text" className="searchbarinput" name="restaurant" placeholder="Search..."/>
+                    <FormBtn
 
-                <button onClick={this.handleFormSubmit}></button>
-
+                      onClick={() => this.searchRestaurants()}
+                    >
+                      Submit Name
+                    </FormBtn>
               </form>
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
                       <Col size="sm-6 md-6" key={restaurant._id}>
 
-                      <Link to={"/checkin/" + restaurant._id}>
                         <Row className="homerow">
                           <Col className="homeimages" size="xs-8 sm-6 md-6">
+                          <Link to={"/checkin/" + restaurant._id}>
                               <img alt='res' className="homeimg" src={restaurant.img} />
-
+                            </Link>
                           </Col>
                           <Col size="xs-4 sm-6 md-6" className="homedetails">
 
-
+                            <Link to={"/checkin/" + restaurant.name}>
                               {restaurant.name}
                               <br />
 
@@ -95,6 +78,7 @@ class Home extends Component {
 
                               <br/><br/>
                               {restaurant.category}
+                            </Link>
                           </Col>
                         </Row>
                         <Row className='homedetail'>
@@ -102,7 +86,6 @@ class Home extends Component {
                         {restaurant.waittime} min. wait
                         </Col>
                         </Row>
-                        </Link>
                        <br/>
 
                       </Col>

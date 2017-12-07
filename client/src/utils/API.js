@@ -7,6 +7,9 @@ export default {
   },
   // Gets the restaurant with the given id
   getRestaurant: function(id) {
+    return axios.get("/api/restaurants?name=" + id);
+  },
+  loadRestaurant: function(id) {
     return axios.get("/api/restaurants/" + id);
   },
   // Deletes the restaurant with the given id
