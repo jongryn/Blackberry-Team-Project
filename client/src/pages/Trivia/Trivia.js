@@ -6,8 +6,10 @@ import "./Trivia.css";
 
 const Trivia = () =>
 
-<div>
-  <Nav />
+<div className="wrapper">
+    <div className="nav">
+        <Nav />
+    </div>
     <div className="container-fluid">
         <a href="/">
             <h1>Test Your Knowledge!</h1>
