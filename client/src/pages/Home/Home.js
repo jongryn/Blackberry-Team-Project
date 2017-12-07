@@ -35,22 +35,22 @@ class Home extends Component {
       <Nav />
           <Container fluid>
           <Row>
-              <Col size="sm-12 md-12 homespacing">
+              <Col size="sm-12 md-12 lg-12 homespacing">
                 <div>
                   <h1>Nearby Restaurants</h1>
                 </div>
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="sm-10 md-10" key={restaurant._id}>
+                      <Col size="sm-10 md-10 lg-10" key={restaurant._id}>
                       <ListItem key={restaurant._id}>
                         <Row>
-                          <Col size="xs-6 md-6">
+                          <Col size="sm-6 md-6 lg-6">
                             <Link to={"/checkin/" + restaurant._id}>
                               <img alt='res' src={restaurant.img} />
                             </Link>
                           </Col>
-                          <Col size="xs-6 md-6 right">
+                          <Col size="sm-6 md-6 lg-6 right">
                             <Link to={"/checkin/" + restaurant.name}>
                               {restaurant.name}
                               <br />
