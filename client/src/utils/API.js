@@ -26,7 +26,7 @@ export default {
   },
   // Gets the restaurant with the given id
   getUser: function(id) {
-    return axios.get("/api/users?_id=" + id);
+    return axios.get("/api/users?id=" + id);
   },
 
   // Deletes the restaurant with the given id

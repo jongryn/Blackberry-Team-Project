@@ -64,8 +64,8 @@ class restaurantsignup extends Component {
         <div>
         <Nav />
             <Container fluid>
-              <Row className="formpadding">
-                <Col size="md-4">
+              <Row>
+                <Col size="md-4 formpadding">
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
@@ -113,7 +113,8 @@ class restaurantsignup extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                <Col size="xs-9">
+                // For submit validation
+                <Col size="md-4 formpadding">
                   <div>
                     <h1>Near By Restaurants</h1>
                   </div>
@@ -124,7 +125,7 @@ class restaurantsignup extends Component {
                           <Link to={"/Management/" + restaurant._id}>
                             <strong>
                               Log into {restaurant.name}
-                              <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} /><br/>
+                              <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
                               <img src= {restaurant.img} />
                             </strong>
                           </Link>
