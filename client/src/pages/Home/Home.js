@@ -46,7 +46,7 @@ class Home extends Component {
                       <ListItem key={restaurant._id}>
                         <Row>
                           <Col size="xs-6 md-6">
-                            <Link to={"/checkin/" + restaurant.name}>
+                            <Link to={"/checkin/" + restaurant._id}>
                               <img alt='res' src={restaurant.img} />
                             </Link>
                           </Col>
