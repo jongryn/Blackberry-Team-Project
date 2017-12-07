@@ -65,7 +65,7 @@ class restaurantsignup extends Component {
         <Nav />
             <Container fluid>
               <Row>
-                <Col size="md-4 formpadding">
+                <Col size="md-4" className='signupform'>
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
@@ -98,12 +98,12 @@ class restaurantsignup extends Component {
                       name="zip"
                       placeholder="Required"
                     />
-                    Imgur URL
+                    Img URL
                     <Input
                     value={this.state.img}
                     onChange={this.handleInputChange}
                     name="img"
-                    placeholder="Img Url(required)"
+                    placeholder="Required"
                     />
                     <FormBtn
                       disabled={!(this.state.name && this.state.zip)}
@@ -113,7 +113,6 @@ class restaurantsignup extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                // For submit validation
                 <Col size="md-4 formpadding">
                   <div>
                     <h1>Near By Restaurants</h1>

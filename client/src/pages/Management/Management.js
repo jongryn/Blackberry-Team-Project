@@ -6,7 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import Footer from "../../components/Footer";
 import "./Management.css";
-import NavMgmt from "../../components/NavMgmt";
+import Nav from "../../components/Nav";
 
 
 class Management extends Component {
@@ -71,29 +71,35 @@ class Management extends Component {
     render() {
       return (
         <div>
-        <NavMgmt />
+        <Nav />
             <Container fluid>
               <Row>
-              <Col size="md-12">
+              <Col size="md-12" className='waitlistspacing'>
                 <div>
-                  <h2>Wait List</h2>
+                  <h3>Wait List</h3>
                 </div>
+                <Row>
+                <Col size="md-2 xs-2"># of Guest</Col>
+                <Col size="md-7 xs-7">Name</Col>
+                <Col size="md-1 xs-1">Wait Time</Col>
+                <Col size="md-1 xs-1"></Col>
+                </Row>
                 {this.state.users.length ? (
 
                   <List>
                     {this.state.users.map(user => (
                       <ListItem key={user._id}>
                             <Row>
-                            <Col size="md-2">
-                            <h4>{user.partysize}</h4>
+                            <Col size="md-1 xs-1">
+                            {user.partysize}
                             </Col>
-                            <Col size="md-6">
-                            <h4>{user.name}</h4>
+                            <Col size="md-9 xs-9">
+                            {user.name}
                             </Col>
-                            <Col size="md-2"
-                            ><h4>{user.userwait}</h4>
+                            <Col size="md-1 xs-1">
+                            {user.userwait}
                             </Col>
-                            <Col size="md-1">
+                            <Col size="md-1 xs-1">
                             <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                             </Col>
                             </Row>

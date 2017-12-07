@@ -107,7 +107,7 @@ class Detail extends Component {
                   name="phone"
                   placeholder="Required"
                   />
-                  Special requests?
+                  Special Request?
                   <Input
                   value={this.state.userrequest}
                   onChange={this.handleInputChange}
