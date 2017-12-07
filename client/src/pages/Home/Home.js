@@ -50,6 +50,7 @@ class Home extends Component {
                             </Link>
                           </Col>
                           <Col size="xs-4 sm-6 md-6" className="homedetails">
+
                             <Link to={"/checkin/" + restaurant.name}>
                               {restaurant.name}
                               <br />

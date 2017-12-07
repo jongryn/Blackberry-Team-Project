@@ -36,7 +36,7 @@ body {
 }
 
 input{
-    width: 108%;
+    width: 100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -64,4 +64,15 @@ hr {
 }
 .col-right {
     float: right;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color:red !important;
+    }
+    .col-homespacing {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 }
