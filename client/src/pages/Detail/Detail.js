@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+import { Col, Container } from "../../components/Grid";
+
 import { Input, FormBtn } from "../../components/Form";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
@@ -13,7 +13,6 @@ class Detail extends Component {
     name: "",
     partysize: 0,
     restaurant: {},
-    name: "",
     zip: "",
     img: "",
     waittime: "",
@@ -24,7 +23,6 @@ class Detail extends Component {
       .then(res => this.setState({ restaurant: res.data }))
       .catch(err => console.log(err));
       this.loadUsers();
-      console.log(this.state.restaurant.waittime);
   }
 
   loadUsers = () => {

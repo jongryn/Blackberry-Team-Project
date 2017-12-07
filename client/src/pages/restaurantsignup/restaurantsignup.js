@@ -125,7 +125,7 @@ class restaurantsignup extends Component {
                             <strong>
                               Log into {restaurant.name}
                               <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
-                              <img src= {restaurant.img} />
+                              <img alt="reignupimg" src= {restaurant.img} />
                             </strong>
                           </Link>
                         </ListItem>

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Management from "./pages/Management";
 import restaurantsignup from "./pages/restaurantsignup";
-import CusSignIn from "./pages/CusSignIn";
 import Trivia from "./pages/Trivia";
 import Restaurants from "./pages/Restaurants";
 import Detail from "./pages/Detail";
