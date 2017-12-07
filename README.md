@@ -1,4 +1,4 @@
-# Waiting App
+# buzzr. App
 
 Technologies: MongoDB, Express, ReactJS, and Node (MERN)
 
