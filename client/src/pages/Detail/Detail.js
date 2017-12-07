@@ -81,8 +81,7 @@ class Detail extends Component {
       <div>
         <Nav />
           <Container fluid>
-              <Col size="md-4 signinform">
-              <Col size="sm-3 md-3 detailspacing">
+              <Col size="md-4" className='checkinform'>
                 <div>
                   <h2>Please Check In</h2>
                 </div>
@@ -124,7 +123,6 @@ class Detail extends Component {
                   </FormBtn>
 
                 </form>
-              </Col>
               </Col>
 
 

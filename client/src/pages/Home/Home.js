@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import Nav from "../../components/Nav";
+import Searchbar from "../../components/Searchbar";
 import Footer from "../../components/Footer";
 import "./Home.css";
 
@@ -33,6 +34,7 @@ class Home extends Component {
     return (
       <div>
       <Nav />
+      <Searchbar />
           <Container fluid>
           <Row>
               <Col size="sm-12 md-12" className='homespacing'>
@@ -66,11 +68,11 @@ class Home extends Component {
                         </Row>
                         <Row className='homedetail'>
                         <Col size="xs-12 sm-12 md-12" className="homedetail">
-                        {restaurant.waittime} minute Wait
+                        {restaurant.waittime} min. wait
                         </Col>
                         </Row>
-                       <hr/>
-
+                       <br/>
+                       
                       </Col>
                     ))}
                   </List>

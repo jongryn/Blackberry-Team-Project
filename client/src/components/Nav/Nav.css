@@ -1,6 +1,7 @@
 .navbar-brand {
-    padding-left: 40%;
+    font-size: 48px;
     color: #dfc12a !important;
+
 }
 
 .navbar-inverse {
@@ -14,7 +15,7 @@
     color: white;
 }
 .logo {
-  text-align: left;
+  text-align: center;
 }
 .navbar-header {
     width: 100;
@@ -29,7 +30,7 @@
 /* Media Queries */
 @media only screen and (min-width: 768px) {
     .navbar-brand {
-        color: #dfc12a !important; 
+        color: #dfc12a !important;
         text-align: center !important;
     }
     .logo {
