@@ -13,20 +13,20 @@ mongoose.connect(
 
 const restaurantSeed = [
   {
-    name: "Noodology",
+    name: "Spoleto - My Italian Kitchen",
     category: "Category",
     city: "City",
     zip: "92618",
     waittime: 0,
-    img: "https://s3-media1.fl.yelpcdn.com/bphoto/zb5eJtfx_umBpnlFwRJW5Q/ls.jpg"
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/jGPA86l4dXadcQSC7OXpPA/o.jpg"
   },
   {
-    name: "Habana",
+    name: "SideDoor ",
     category: "Category",
     city: "City",
     zip: "92618",
     waittime: 0,
-    img: "https://s3-media4.fl.yelpcdn.com/bphoto/Id_bwTiWd60ztz3QDmT9pw/ls.jpg"
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/fJeaVLzTR9p-Xdk16mpWKA/o.jpg"
   },
   {
     name: "Urban Seoul",
@@ -34,7 +34,7 @@ const restaurantSeed = [
     city: "City",
     zip: "92612",
     waittime: 0,
-    img: "https://s3-media3.fl.yelpcdn.com/bphoto/5Qodjcqp5L5kFvbuT7p7yA/ls.jpg"
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/9J8QyCNLdLzUP5BNHcfLow/o.jpg"
   },
   {
     name: "EMC Seafood & Raw Bar",
@@ -42,7 +42,7 @@ const restaurantSeed = [
     city: "City",
     zip: "92604",
     waittime: 0,
-    img: "https://s3-media1.fl.yelpcdn.com/bphoto/SKB_zCrN-nVUS2zOJQkUaA/ls.jpg"
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/j7tHg3RbX77bO85Ytbf8mQ/o.jpg"
   },
   {
     name: "The Stand",
@@ -50,7 +50,7 @@ const restaurantSeed = [
     city: "City",
     zip: "92618",
     waittime: 0,
-    img: "https://s3-media1.fl.yelpcdn.com/bphoto/-xGJAZ89RZYyVtj8geGKjQ/ls.jpg"
+    img: "https://s3-media3.fl.yelpcdn.com/bphoto/SEqcOorgORBB4T0T9qnZFg/o.jpg"
   },
   {
     name: "The Cut",
@@ -58,7 +58,7 @@ const restaurantSeed = [
     city: "City",
     zip: "92606",
     waittime: 0,
-    img: "https://s3-media4.fl.yelpcdn.com/bphoto/PpNmkfxFVg54ggO6Bzbg-w/ls.jpg"
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/yNgml_VqyHNadYuBUu7bhA/o.jpg"
   },
   {
     name: "CAVA",
@@ -69,20 +69,20 @@ const restaurantSeed = [
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/V4ANxxCFV94x0Jyx8H-2eg/ls.jpg"
   },
   {
-    name: "Puesto - Irvine",
+    name: "Puesto",
     category: "Category",
     city: "City",
     zip: "92618",
     waittime: 0,
-    img: "https://s3-media3.fl.yelpcdn.com/bphoto/g4mCpDIapGILwIQal7F3Ag/ls.jpg"
+    img: "https://s3-media3.fl.yelpcdn.com/bphoto/EK9hda6PrKh0bG9DIaeioQ/o.jpg"
   },
   {
-    name: "Puesto - Irvine",
+    name: "Blaze Fast-Fire’d Pizza",
     category: "Category",
     city: "City",
     zip: "92618",
     waittime: 0,
-    img: "https://s3-media3.fl.yelpcdn.com/bphoto/g4mCpDIapGILwIQal7F3Ag/ls.jpg"
+    img: "https://s3-media3.fl.yelpcdn.com/bphoto/n18QxnT_nbysFcSkktjQfg/o.jpg"
   },
   {
     name: "Meizhou Dongpo",
@@ -91,6 +91,126 @@ const restaurantSeed = [
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/4mqls8Yp_V_CXOrwA0bV7Q/ls.jpg"
+  },
+  {
+    name: "Twenty Eight",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/rUTZJ97H_UQYEk1SKezD2w/o.jpg"
+  },
+  {
+    name: "Caspian Restaurant",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/XrGhXIjWY8kFiQnK-CMFTw/o.jpg"
+  },  
+  {
+    name: "Zov’s Irvine",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/4mqls8Yp_V_CXOrwA0bV7Q/ls.jpg"
+  },  
+  {
+    name: "Nick’s Laguna Beach",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/aC1d4ZNWAmG_pOJmWxs5GQ/o.jpg"
+  }, 
+  {
+    name: "Daily Grill",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media3.fl.yelpcdn.com/bphoto/SuNgo06OR42H4iLMdSMylg/o.jpg"
+  }, 
+  {
+    name: "Driftwood Kitchen",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/gCZGy9GzZmKO8-bzti5v9Q/o.jpg"
+  }, 
+  {
+    name: "Mix Mix Kitchen Bar",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/ng3w9o1zECFZxlVbYErdAg/o.jpg"
+  }, 
+  {
+    name: "The Recess Room",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/I4OchMRcpfzkrbbk7WZ0Uw/o.jpg"
+  }, 
+  {
+    name: "Ten Asian Bistro",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/VEtT-m-e0FuZBwPhoTND8g/o.jpg"
+  },  
+  {
+    name: "Kang Ho Dong Baekjeong",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/LFu7lLVaaEEO4sc6SnF34g/o.jpg"
+  },  
+  {
+    name: "Hen House Grill",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media1.fl.yelpcdn.com/bphoto/cmNCpAic5dhnSDsXR_httA/o.jpg"
+  },
+  {
+    name: "Asian Box",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/wI670E5RdUav3z1IUZK8iw/o.jpg"
+  },
+  {
+    name: "Bosscat Kitchen and Libations",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/A0gMmzqDOyWtNLjA-F5ttg/o.jpg"
+  },
+  {
+    name: "Habana",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media2.fl.yelpcdn.com/bphoto/eOunbCV0f3hsmxc2Ufbmeg/o.jpg"
+  }, 
+  {
+    name: "Kakurega",
+    category: "Category",
+    city: "City",
+    zip: "92604",
+    waittime: 0,
+    img: "https://s3-media4.fl.yelpcdn.com/bphoto/ot8YRhYICjJQcWfAjtxBVA/o.jpg"
   }
 ];
 

@@ -8,10 +8,25 @@ body {
 
 /* Body */
 /* <Col size="md-12 homespacing"> */
-.col-homespacing {
-    margin-top: 28%;
-    margin-bottom: 26%;
+.homespacing {
+    margin-top: 120px;
 }
+
+.homeimages {
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+}
+.homedetails {
+  margin-left: 20px;
+  padding: 0px;
+}
+.homeimg {
+  height: 220px;
+  width: auto;
+
+}
+
 input{
     width: 100%;
     box-sizing: border-box;
@@ -38,4 +53,15 @@ hr {
 }
 .col-right {
     float: right;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color:red !important;
+    }
+    .col-homespacing {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 }
