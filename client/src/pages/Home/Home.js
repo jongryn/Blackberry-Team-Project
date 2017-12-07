@@ -41,7 +41,7 @@ class Home extends Component {
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
-                      <Col size="md-12" key={restaurant._id}>
+                      <Col size="sm-6 md-6" key={restaurant._id}>
 
                         <Row className="homerow">
                           <Col className="homeimages" size="xs-8 sm-6 md-6">
@@ -53,14 +53,20 @@ class Home extends Component {
                             <Link to={"/checkin/" + restaurant.name}>
                               {restaurant.name}
                               <br />
-                              {restaurant.category}
+
                               <br />
                               {restaurant.city}, {restaurant.zip}
                               <br />
-                              Est. Wait Time: {restaurant.waittime} min.
+
                               <br/><br/>
+                              {restaurant.category}
                             </Link>
                           </Col>
+                        </Row>
+                        <Row className='homedetail'>
+                        <Col size="xs-12 sm-12 md-12" className="homedetail">
+                        {restaurant.waittime} minute Wait
+                        </Col>
                         </Row>
                        <hr/>
 
