@@ -1,4 +1,4 @@
-# buzzr. App
+# buzzr. app
 
 Technologies: MongoDB, Express, ReactJS, and Node (MERN)
 
