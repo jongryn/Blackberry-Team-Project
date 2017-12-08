@@ -12,10 +12,9 @@ const Trivia = () =>
         <Nav />
     </div>
     <div className="container-fluid">
-        <a href="/">
+        <a href="/Trivia">
         <h1>Lets Play Trivia!</h1>
         </a>
-        <h4>Test Your Knowledge!</h4>
         <Quiz />
     </div>
     <div className="Ads">

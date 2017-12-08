@@ -8,10 +8,6 @@
 .question h3 {
     font-size: 18px;
     font-weight: bold;
-    /* font-family: 'Anton', sans-serif; */
-    /* font-family: 'Ranchers', cursive; */
-
-    /* font-family: 'Boogaloo', cursive; */
 }
 
 .question ul {
@@ -21,12 +17,9 @@
 .question li {
     background-color: rgba(0, 0, 0, .05);
     padding: 16px 8px;
-    border-radius: 8px;
+    border-radius: 2px;
     margin: 16px 0 0 0;
     user-select: none;
-    /* font-family: 'Anton', sans-serif; */
-    /* font-family: 'Ranchers', cursive; */
-    /* font-family: 'Boogaloo', cursive; */
 }
 
 .question li:hover {

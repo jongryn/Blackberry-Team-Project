@@ -65,7 +65,7 @@ a {
 /* Media Queries */
 @media only screen and (min-width: 768px) {
     body {
-        background-color:red !important;
+        background-color:#d3d3d3 !important;
     }
     .col-homespacing {
         margin-top: 10%;

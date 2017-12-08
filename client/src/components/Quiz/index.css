@@ -7,10 +7,6 @@
     border-radius: 2px;
     float: center;
     cursor: pointer;
-    /* font-family: 'Anton', sans-serif; */
-    /* font-family: 'Ranchers', cursive; */
-    font-family: 'Shrikhand', cursive;
-    /* font-family: 'Boogaloo', cursive; */
 }
 
 .next-button:hover {
@@ -19,11 +15,9 @@
 
 .quiz-header {
     font-size: 18px;
-    color: #FA7C92;
+    color: #dfc12a;
     font-weight: bold;
-    /* font-family: 'Anton', sans-serif; */
-    /* font-family: 'Ranchers', cursive; */
-    /* font-family: 'Boogaloo', cursive; */
+    
 }
 
 p {

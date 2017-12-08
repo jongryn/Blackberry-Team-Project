@@ -2,8 +2,6 @@
   max-height: Auto;
   border: 0px #DDDDDD solid;
   border-radius: 4px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .list-overflow-container ul {
@@ -36,4 +34,15 @@
 .list-group-item {
   background-color: #151515;
   color: white;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  body {
+      background-color:#d3d3d3 !important;
+  }
+  .col-homespacing {
+      margin-top: 10%;
+      margin-bottom: 10%;
+  }
 }
