@@ -26,17 +26,3 @@
 .navbar {
   padding-bottom: 0px;
 }
-
-/* Media Queries */
-@media only screen and (min-width: 768px) {
-    .navbar-brand {
-        color: #dfc12a !important;
-        text-align: center !important;
-    }
-    .logo {
-        text-align: center !important;
-      }
-      .container-fluid{
-          text-align: center;
-    }
-}
