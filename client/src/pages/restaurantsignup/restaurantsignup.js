@@ -65,7 +65,7 @@ class restaurantsignup extends Component {
         <Nav />
             <Container fluid>
               <Row>
-                <Col size="md-4" className='signupform'>
+                <Col size="md-6 lg-6" className='signupform'>
                   <div>
                     <h1>Restaurant Signup</h1>
                   </div>
@@ -113,14 +113,14 @@ class restaurantsignup extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                <Col size="md-4 formpadding">
+                <Col size="md-6 lg-6" className="formpadding">
                   <div>
                     <h1>Near By Restaurants</h1>
                   </div>
                   {this.state.restaurants.length ? (
                     <List>
                       {this.state.restaurants.map(restaurant => (
-                        <ListItem key={restaurant._id}>
+                        <ListItem className="ListItem" key={restaurant._id}>
                           <Link to={"/Management/" + restaurant._id}>
                             <strong>
                               Log into {restaurant.name}
