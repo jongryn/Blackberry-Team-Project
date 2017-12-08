@@ -1,21 +1,28 @@
 .next-button {
-    background-color: #EE595D;
-    color: white;
+    background-color: white;
+    color: #151515;
     font-size: 18px;
     font-weight: bold;
     padding: 16px;
     border-radius: 2px;
-    float: center;
     cursor: pointer;
+    margin: 25px 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 .next-button:hover {
-    background-color: #FF96AC;
+    background-color: #151515;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 .quiz-header {
     font-size: 18px;
-    color: #dfc12a;
+    color: white;
     font-weight: bold;
     
 }
