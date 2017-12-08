@@ -1,10 +1,10 @@
 .next-button {
-    background-color: white;
-    color: #151515;
+    background-color: #151515;
+    color: white !important;
     font-size: 18px;
     font-weight: bold;
     padding: 16px;
-    border-radius: 2px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 25px 0;
     border-style: solid;
@@ -13,8 +13,8 @@
 }
 
 .next-button:hover {
-    background-color: #151515;
-    color: white;
+    background-color: white;
+    color: #151515 !important;
     border-style: solid;
     border-width: 1px;
     border-color: white;
@@ -24,7 +24,6 @@
     font-size: 18px;
     color: white;
     font-weight: bold;
-    
 }
 
 p {
@@ -35,4 +34,8 @@ p {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+.right {
+    float: right;
+    margin-right: 5%;
 }

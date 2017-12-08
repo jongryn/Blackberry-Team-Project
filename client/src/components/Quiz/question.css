@@ -1,13 +1,17 @@
 .question {
     margin: 25px 0;
-    background-color: white;
+    background-color: #151515;
     border-radius: 10px;
     padding: 7px 30px;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .question h3 {
     font-size: 18px;
     font-weight: bold;
+    color: white;
 }
 
 .question ul {
@@ -20,10 +24,14 @@
     border-radius: 2px;
     margin: 16px 0 0 0;
     user-select: none;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .question li:hover {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: white;
+    color: #151515;
     cursor: pointer;
 }
 
