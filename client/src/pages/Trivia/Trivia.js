@@ -13,7 +13,7 @@ const Trivia = () =>
     </div>
     <div className="container-fluid">
         <a href="/Trivia">
-        <h1>Lets Play Trivia!</h1>
+        <h1>Reset Trivia Game</h1>
         </a>
         <Quiz />
     </div>
