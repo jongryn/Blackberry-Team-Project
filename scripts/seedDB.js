@@ -14,200 +14,200 @@ mongoose.connect(
 const restaurantSeed = [
   {
     name: "Spoleto - My Italian Kitchen",
-    category: "Category",
-    city: "City",
+    category: " Italian",
+    city: "Irvine",
     zip: "92618",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/jGPA86l4dXadcQSC7OXpPA/o.jpg"
   },
   {
     name: "SideDoor ",
-    category: "Category",
-    city: "City",
+    category: "Gastropubs, Desserts, American ",
+    city: "Corona Del Mar",
     zip: "92618",
     waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/fJeaVLzTR9p-Xdk16mpWKA/o.jpg"
   },
   {
     name: "Urban Seoul",
-    category: "Category",
-    city: "City",
+    category: "Asian Fusion, Korean, Tapas Bars",
+    city: "Irvine",
     zip: "92612",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/9J8QyCNLdLzUP5BNHcfLow/o.jpg"
   },
   {
     name: "EMC Seafood & Raw Bar",
-    category: "Category",
-    city: "City",
+    category: "Seafood, Bars, Live/Raw Food",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/j7tHg3RbX77bO85Ytbf8mQ/o.jpg"
   },
   {
     name: "The Stand",
-    category: "Category",
-    city: "City",
+    category: "American (New), Burgers",
+    city: "Irvine",
     zip: "92618",
     waittime: 0,
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/SEqcOorgORBB4T0T9qnZFg/o.jpg"
   },
   {
     name: "The Cut",
-    category: "Category",
-    city: "City",
+    category: "Burgers, American (Traditional) ",
+    city: "Irvine",
     zip: "92606",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/yNgml_VqyHNadYuBUu7bhA/o.jpg"
   },
   {
     name: "CAVA",
-    category: "Category",
-    city: "City",
+    category: "Mediterranean",
+    city: "Irvine",
     zip: "92606",
     waittime: 0,
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/V4ANxxCFV94x0Jyx8H-2eg/ls.jpg"
   },
   {
     name: "Puesto",
-    category: "Category",
-    city: "City",
+    category: "Tacos, Beer Bar ",
+    city: "Irvine",
     zip: "92618",
     waittime: 0,
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/EK9hda6PrKh0bG9DIaeioQ/o.jpg"
   },
   {
     name: "Blaze Fast-Fire’d Pizza",
-    category: "Category",
-    city: "City",
+    category: "Pizza, Salad, Fast Food",
+    city: "Irvine",
     zip: "92618",
     waittime: 0,
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/n18QxnT_nbysFcSkktjQfg/o.jpg"
   },
   {
     name: "Meizhou Dongpo",
-    category: "Category",
-    city: "City",
+    category: "Szechuan, Seafood, Asian Fusion",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/4mqls8Yp_V_CXOrwA0bV7Q/ls.jpg"
   },
   {
     name: "Twenty Eight",
-    category: "Category",
-    city: "City",
+    category: "American (New), Whiskey Bars",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/rUTZJ97H_UQYEk1SKezD2w/o.jpg"
   },
   {
     name: "Caspian Restaurant",
-    category: "Category",
-    city: "City",
+    category: "Middle Eastern, Persian/Iranian, Mediterranean",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/XrGhXIjWY8kFiQnK-CMFTw/o.jpg"
   },  
   {
     name: "Zov’s Irvine",
-    category: "Category",
-    city: "City",
+    category: "American (New), Breakfast & Brunch, Desserts",
+    city: "Newport Coast",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/4mqls8Yp_V_CXOrwA0bV7Q/ls.jpg"
   },  
   {
     name: "Nick’s Laguna Beach",
-    category: "Category",
-    city: "City",
+    category: "American (Traditional), Breakfast & Brunch, Steakhouses",
+    city: "Laguna Beach",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/aC1d4ZNWAmG_pOJmWxs5GQ/o.jpg"
   }, 
   {
     name: "Daily Grill",
-    category: "Category",
-    city: "City",
+    category: " American (Traditional), Bars, Breakfast & Brunch",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media3.fl.yelpcdn.com/bphoto/SuNgo06OR42H4iLMdSMylg/o.jpg"
   }, 
   {
     name: "Driftwood Kitchen",
-    category: "Category",
-    city: "City",
+    category: "Seafood, Steakhouses, Cocktail Bars",
+    city: "Laguna Beach",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/gCZGy9GzZmKO8-bzti5v9Q/o.jpg"
   }, 
   {
     name: "Mix Mix Kitchen Bar",
-    category: "Category",
-    city: "City",
+    category: "Filipino, Tapas/Small Plates, American (New) ",
+    city: "Santa Ana",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/ng3w9o1zECFZxlVbYErdAg/o.jpg"
   }, 
   {
     name: "The Recess Room",
-    category: "Category",
-    city: "City",
+    category: "American (New), Gastropubs",
+    city: "Fountain Valley",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/I4OchMRcpfzkrbbk7WZ0Uw/o.jpg"
   }, 
   {
     name: "Ten Asian Bistro",
-    category: "Category",
-    city: "City",
+    category: " Asian Fusion, Sushi Bars, Japanese",
+    city: "Newport Beach",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/VEtT-m-e0FuZBwPhoTND8g/o.jpg"
   },  
   {
     name: "Kang Ho Dong Baekjeong",
-    category: "Category",
-    city: "City",
+    category: "Korean, Barbeque",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/LFu7lLVaaEEO4sc6SnF34g/o.jpg"
   },  
   {
     name: "Hen House Grill",
-    category: "Category",
-    city: "City",
+    category: "Persian/Iranian, Mediterranean",
+    city: "Irivne",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media1.fl.yelpcdn.com/bphoto/cmNCpAic5dhnSDsXR_httA/o.jpg"
   },
   {
     name: "Asian Box",
-    category: "Category",
-    city: "City",
+    category: "Asian Fusion, Vegan, Gluten-Free",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/wI670E5RdUav3z1IUZK8iw/o.jpg"
   },
   {
     name: "Bosscat Kitchen and Libations",
-    category: "Category",
-    city: "City",
+    category: "American (New), Lounges, Southern",
+    city: "Irvine",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/A0gMmzqDOyWtNLjA-F5ttg/o.jpg"
   },
   {
     name: "Habana",
-    category: "Category",
-    city: "City",
+    category: "Cuban, Latin American, Bars ",
+    city: "Costa Mesa",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media2.fl.yelpcdn.com/bphoto/eOunbCV0f3hsmxc2Ufbmeg/o.jpg"
   }, 
   {
     name: "Kakurega",
-    category: "Category",
-    city: "City",
+    category: "Sushi Bars, Izakaya",
+    city: "Costa Mesa",
     zip: "92604",
     waittime: 0,
     img: "https://s3-media4.fl.yelpcdn.com/bphoto/ot8YRhYICjJQcWfAjtxBVA/o.jpg"
