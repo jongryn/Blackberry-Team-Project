@@ -1,5 +1,8 @@
 # buzzr. app
 
+## Demo
+The demo of the burger eating application can be found [here](https://buzzrapp.herokuapp.com/).
+
 Technologies: MongoDB, Express, ReactJS, and Node (MERN)
 
 Description: A mobile application that allows users to get wait times for restaurants. Once the user decides what restaurant they want to go to, they are able to check-in and make a reservation. Users are able to play a trivia game while they wait for their table and have the chance to win a coupon to the restaurant. They are notified on their mobile device as soon as their table is ready.
@@ -30,6 +33,5 @@ yarn start
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
 
-The demo of the burger eating application can be found [here](https://buzzrapp.herokuapp.com/).
 
 
