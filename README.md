@@ -1,7 +1,7 @@
 # buzzr. app
 
 ## Demo
-The demo of the burger eating application can be found [here](https://buzzrapp.herokuapp.com/).
+The demo of the buzzr. application can be found [here](https://buzzrapp.herokuapp.com/).
 
 ## Technologies:
 
