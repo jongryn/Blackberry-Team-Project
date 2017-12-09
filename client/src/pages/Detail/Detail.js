@@ -79,9 +79,9 @@ class Detail extends Component {
       <div className="detail-wrapper">
         <Nav />
           <Container fluid>
-          <Col size="sm-2 md-2 lg-2">
+          <Col size="md-2 lg-2">
           </Col> 
-              <Col size="sm-8 md-8 lg-8" className='checkinform'>
+              <Col size="md-8 lg-8" className='checkinform'>
                 <div>
                   <h2>Please Check In</h2>
                 </div>
