@@ -54,7 +54,7 @@ class Home extends Component {
       )
       .catch(err => console.log(err));
   };
-
+{/*hello*/}
   render() {
     return (
       <div>
@@ -70,7 +70,7 @@ class Home extends Component {
                 placeholder="Search restaurants"/>
                 <button onClick={this.handleFormSubmit}></button>
               </form>
-              
+
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
