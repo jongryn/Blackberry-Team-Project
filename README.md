@@ -28,3 +28,5 @@ yarn start
 ```
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+
+https://buzzrapp.herokuapp.com/
