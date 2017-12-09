@@ -30,20 +30,20 @@ button {
 }
 .homedetail {
   border-radius: 5px;
-  border: 1px solid #dfc12a;
+  border: 1px solid white;
   text-align: center;
   color: white;
   font-size: 16px;
 }
 .homedetails {
-
   margin-left: 20px;
   padding: 0px;
+  float:right;
 }
 .homeimg {
   height: auto;
-  width: 220px;
-
+  width: 100%;
+  max-width: 220px;
 }
 
 
@@ -70,5 +70,17 @@ a {
     .col-homespacing {
         margin-top: 10%;
         margin-bottom: 10%;
+    }
+    .homeimg {
+      height: auto;
+      width: 100%;
+      max-width: 440px;
+    }
+    .homedetails {
+      border-radius: 5px;
+      text-align: center;
+      color: white;
+      font-size: 20px !important;
+      padding-top: 55px;
     }
 }

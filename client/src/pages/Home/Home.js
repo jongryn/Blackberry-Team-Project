@@ -80,13 +80,11 @@ class Home extends Component {
                           <Col className="homeimages" size="xs-5 sm-6 md-6">
                               <img alt='res' className="homeimg" src={restaurant.img} />
                           </Col>
-                          <Col size="xs-4 sm-4 md-4" className="homedetails">
+                          <Col size="xs-4 sm-4 md-4 lg-4" className="homedetails">
                               {restaurant.name}
-                              <br />
                               <br />
                               {restaurant.city}, {restaurant.zip}
                               <br />
-                              <br/><br/>
                               {restaurant.category}
                           </Col>
                         </Row>
