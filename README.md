@@ -29,4 +29,7 @@ yarn start
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-https://buzzrapp.herokuapp.com/
+
+The demo of the burger eating application can be found [here](https://buzzrapp.herokuapp.com/).
+
+
