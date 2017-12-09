@@ -70,6 +70,7 @@ class Home extends Component {
                 placeholder="Search restaurants"/>
                 <button onClick={this.handleFormSubmit}></button>
               </form>
+              
                 {this.state.restaurants.length ? (
                   <List>
                     {this.state.restaurants.map(restaurant => (
