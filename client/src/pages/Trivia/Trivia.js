@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Quiz from "../../components/Quiz";
+import TrvBtn from "../../components/TrvBtn";
 import Ads from "../../components/Ads";
 import "./Trivia.css";
 
@@ -12,10 +13,9 @@ const Trivia = () =>
         <Nav />
     </div>
     <div className="container-fluid">
-        <a href="/Trivia">
-        <h1>Play Trivia</h1>
-        </a>
+        <h1>Play Trivia!</h1>
         <Quiz />
+        <TrvBtn className="TrvBtn"/>
     </div>
     <div className="Ads">
     <Ads />

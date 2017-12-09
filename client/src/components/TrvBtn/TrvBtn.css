@@ -1,7 +1,23 @@
 
 .btn {
-    float: center;
-    color: #4744e7;
-    background-color: orange;
-    padding: 10px;
+    background-color: #151515 !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    cursor: pointer;
+    margin: 25px 0;
   }
+  .btn:hover {
+    background-color: white !important;
+    color: #151515 !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+
