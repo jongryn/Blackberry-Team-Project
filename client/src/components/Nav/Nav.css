@@ -1,6 +1,6 @@
 .navbar-brand {
     font-size: 48px;
-    color: #dfc12a !important;
+    color: white !important;
 
 }
 
@@ -25,4 +25,9 @@
 }
 .navbar {
   padding-bottom: 0px;
+  border-style: solid;
+  border-color: white !important;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
 }
